@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+    /*
+        This gradient is provided by gradienta.io
+    */
+}
+
+header {
+    width: 98%;
+    max-width: 80rem;
+    min-height: 15rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 1.75rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2rem;
+}
+header > * {
+    margin: 0.75rem 0;
+}
+header h1 {
+    display: inline-block;
+    line-height: 1.2;
+    border-bottom: 1px solid #333;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+header h1 span {
+    background: #333;
+    color: #ff0;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+header a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    color: crimson;
+}
+
+
+/*      Table
+******************************************/
+table.blueTable {
+    background-color: #69D0B3;
+    width: 98%;
+    max-width: 60rem;
+    min-height: 20rem;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 3rem auto;
+}
+table.blueTable td, table.blueTable th {
+    padding: 20px 0px;
+}
+table.blueTable tbody tr td:first-child {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table.blueTable tbody td {
+    font-size: 14px;
+}
+table.blueTable tr:nth-child(even) {
+    background: #B2FCFF;
+}
+table.blueTable thead {
+    background: #e43f5a;
+}
+table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(145deg, #f44360, #cd3951);
+    box-shadow: inset 12px 12px 24px #c2364d, 
+            inset -12px -12px 24px #ff4868;
+}
+
+table a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px dotted #ff0;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+table a:hover {
+    color: #000;
+}

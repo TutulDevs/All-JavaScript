@@ -1,0 +1,29 @@
+  Fun JS
+_________________________
+01. Quick Tip
+02. Running Tracker
+
+
+
+  JavaScript 30
+_________________________________
+01.
+02.
+
+
+  Traversy
+___________________________________________
+01.
+02. 
+
+  Smilga
+______________________________________________________
+01.
+02.
+
+  Here & There
+____________________________________________________________
+01. Random RGB  - (add hex)
+02. TODO	- (not completed)
+03. FizzBuzz  - (add DOM)
+04. Weather App - (completed, add more days) --Listed
