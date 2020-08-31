@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;height: 100vh;
+    font-family: sans-serif;
+    background: #ededed;
+    transition: all 0.1s linear;
+    display: grid;
+    justify-items: center;
+    align-items: center;   
+}
+section {
+    width: 90%;
+    max-width: 500px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: inset 20px 20px 60px #d9d9d9, 
+            inset -20px -20px 60px #ffffff;
+}
+section > * {
+    margin: 0.75rem 0;
+}
+h2 {
+    background: -webkit-linear-gradient(-110deg,#21dc53, #226721);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+button {
+    cursor: pointer; 
+    background: #fff;
+    color: #EC5E0C;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transform: skew(-15deg); 
+    border: 2px solid #EC5E0C;
+}
+.signature {
+    text-align: center;
+    font-size: 0.85rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0;
+}
+.signature a {
+    text-decoration: none;
+    color: initial;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+    
+    <section>
+        <h2>Random RGB Color Generator</h2>
+        <h4 class="colorName">RGB Code</h4>
+        <button class="generate">Generate</button>
+    </section>
+
+    <p class="signature">
+        Made with ❤️ by <a href="https://twitter.com/TutulDevs">Tutul</a>
+    </p>
+
+
+<script>
+
+function getRandom () {
+    //  Random number from 0 to 255
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+
+    //  create rgb
+    let rgb =  red + ', ' + green + ', ' + blue;
+
+    return rgb;
+};
+
+
+document.querySelector('.generate').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'rgb(' + getRandom() + ')';
+    //console.log(getRan());
+
+    // set the value in color name
+    document.querySelector('.colorName').textContent = 'rgb(' + getRandom() + ');';
+});
+</script>
+</body>
+</html>

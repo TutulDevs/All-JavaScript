@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS To-Do</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: Roboto, sans-serif;
+    background: #2790B0;
+}
+.main-body {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+input {
+    padding: 5px 10px;
+    border: 1px solid #03a9f4;
+    border-radius: 10px;
+}
+input:focus {
+    outline: 1px solid #03a9f4;
+}
+ul {
+    list-style: none;
+}
+li {
+    background: linear-gradient(-45deg, #1fb3e0, #fff);
+    min-height: 40px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete {
+    line-height: 0.7;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background: #F21D41;
+}
+p {
+    margin: 30px 0; 
+    padding: 10px 15px; 
+    background: #00BCD4;
+    display: none;
+}
+</style>
+</head>
+<body>
+    <div class="main-body">
+        <div class="header">
+            <h2>Search field</h2>
+            <input type="text" id="filter" placeholder="Search here...">
+        </div>
+    
+        <main>
+            <h2>Add To-Do</h2>
+            <form action="#" id="addForm"> 
+                <input type="text" id="item" placeholder="Add Item...">
+                <input type="submit" value="Add">
+            </form>
+    
+            <h2>To-Do Lists</h2>
+            <ul id="items">
+                <li class="items__item">
+                    Wake up! 
+                    <span class="delete">x</span>
+                </li>
+                <li class="items__item">
+                    Start coding 💻 
+                    <span class="delete">x</span>
+                </li>
+                <li class="items__item">
+                    Go to bed. 
+                    <span class="delete">x</span>
+                </li>
+                <li class="items__item">
+                    Repeat 🔁
+                    <span class="delete">x</span>
+                </li>
+            </ul>
+        </main>
+        <p>
+            Currently it has a bug/ problem. <br><br>
+            1. When I search the delete button ignores the justify-content: space-between. <br>
+            2. After removing the letters from the search field the delete button remains in the same place. <br> <br>
+            If you can give me a suggestion on how to solve this I'll be grateful to you. My <a href="https://twitter.com/TutulDevs">twitter</a>.
+        </p>
+    </div>
+    <!--    I don't have a life 💯  -->
+
+
+<script>
+const form = document.getElementById('addForm');
+const list = document.getElementById('items');
+const filter = document.getElementById('filter');
+
+//  event listeners
+form.addEventListener('submit', addItem);
+list.addEventListener('click', removeItem);
+filter.addEventListener('keyup', filterItems);
+
+//  addItem
+function addItem(e) {
+    e.preventDefault(); // prevent default submission
+
+    //  get the value from input
+    let newItem = document.getElementById('item').value;
+    
+    //  let's create an li 
+    let li = document.createElement('li');
+    //  give it a class
+    li.className = 'items__item';
+    //  pass the value of the input/newItem
+    li.appendChild(document.createTextNode(newItem));
+    //  include the li in the ul 
+    list.appendChild(li);
+    //console.log(li);
+
+    let delButton = document.createElement('span');
+    delButton.className = 'delete';
+    delButton.appendChild(document.createTextNode('x'));
+    li.appendChild(delButton);
+};
+
+//  removeItem
+function removeItem(e) {
+    if (e.target.classList.contains('delete')) {
+        //console.log('delete class'); 
+        if (confirm('Are you sure?')) {
+            let li = e.target.parentElement;
+            list.removeChild(li);
+        };
+    };
+};
+
+//  Filter Item
+function filterItems(e) {
+    //  get the text in the search input & case insensitive
+    let text = e.target.value.toLowerCase();
+    
+    //  get all the li
+    let lists = document.getElementsByTagName('li');  
+
+    //  let's convert all the li in an array 
+    Array.from(lists).forEach(function (item) {
+        let itemName = item.firstChild.textContent;
+        
+        if (itemName.toLowerCase().indexOf(text) != -1) {
+            item.style.display = 'flex';
+        }else {
+            item.style.display = 'none';
+        };
+    });
+};
+ 
+
+</script>    
+</body>
+</html>
