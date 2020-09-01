@@ -17,12 +17,14 @@ html {
   }
   
   .keys {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+    align-content: center;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+    padding: 2rem;
+    padding-top: 5rem;
   }
   
   .key {
@@ -38,10 +40,6 @@ html {
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
   }
   
   .playing {
