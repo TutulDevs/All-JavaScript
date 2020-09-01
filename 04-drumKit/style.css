@@ -32,11 +32,16 @@ html {
     font-size: 1.5rem;
     padding: 1rem .5rem;
     transition: all .07s ease;
-    width: 6rem;
+    width: 10rem;
+    height: 10rem;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .playing {
