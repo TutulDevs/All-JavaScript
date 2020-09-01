@@ -95,7 +95,7 @@ table.blueTable thead th {
 
 table a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     margin-left: 0.5rem;
     padding-bottom: 0.25rem;
     border-bottom: 2px dotted #ff0;
@@ -103,5 +103,5 @@ table a {
     font-weight: bold;
 }
 table a:hover {
-    color: #000;
+    color: #f9ca24;
 }
