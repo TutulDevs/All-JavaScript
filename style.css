@@ -42,8 +42,8 @@ header h1 {
     padding: 1rem 1rem 0 1rem;
 }
 header h1 span {
-    background: #333;
-    color: #ff0;
+    background: #f9ca24;
+    color: #fff;
     padding: 1rem;
     padding-bottom: 0;
 }
@@ -57,13 +57,14 @@ header a {
 /*      Table
 ******************************************/
 table.blueTable {
-    background-color: #69D0B3;
+    background-color: #2e86de;
     width: 98%;
     max-width: 60rem;
     min-height: 20rem;
     text-align: left;
     border-collapse: collapse;
     margin: 3rem auto;
+    color: #fff;
 }
 table.blueTable td, table.blueTable th {
     padding: 20px 0px;
@@ -73,10 +74,11 @@ table.blueTable tbody tr td:first-child {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 table.blueTable tbody td {
-    font-size: 14px;
+    font-size: 16px;
+    color: #fff;
 }
 table.blueTable tr:nth-child(even) {
-    background: #B2FCFF;
+    background: #130f40;
 }
 table.blueTable thead {
     background: #e43f5a;
