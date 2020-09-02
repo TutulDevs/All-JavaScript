@@ -1,106 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta name="description" content="JS Drum Kit by Tutul" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="./icons/icon-192-192.png"
+            sizes="192x192"
+        />
+        <link rel="manifest" href="./manifest.json" />
+        <!-- iOS  -->
+        <link
+            rel="apple-touch-icon"
+            href="./icons/icon-192-192.png"
+            sizes="192x192"
+        />
+        <!-- Android  -->
+        <meta name="theme-color" content="#2196f3" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <!-- iOS -->
+        <meta name="apple-mobile-web-app-title" content="DrumKit" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#2196f3" />
 
-<head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>JS Drum Kit</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="manifest.json" />
+    </head>
 
-  <meta name="description" content="JS Drum Kit by Tutul">
-  <link rel="icon" type="image/png" href="./icons/icon-192-192.png" sizes="192x192">
-  <link rel="manifest" href="./manifest.json">
-  <!-- iOS  -->
-  <link rel="apple-touch-icon" href="./icons/icon-192-192.png" sizes="192x192">
-  <!-- Android  -->
-  <meta name="theme-color" content="#2196f3">
-  <meta name="mobile-web-app-capable" content="yes">
-  <!-- iOS -->
-  <meta name="apple-mobile-web-app-title" content="DrumKit">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#2196f3">
+    <body>
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">clap</span>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">hihat</span>
+            </div>
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">kick</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">openhat</span>
+            </div>
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound">boom</span>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound">ride</span>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound">snare</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="sound">tom</span>
+            </div>
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+                <span class="sound">tink</span>
+            </div>
+        </div>
 
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-</head>
+        <div class="audios">
+            <audio data-key="65" src="sounds/clap.wav"></audio>
+            <audio data-key="83" src="sounds/hihat.wav"></audio>
+            <audio data-key="68" src="sounds/kick.wav"></audio>
+            <audio data-key="70" src="sounds/openhat.wav"></audio>
+            <audio data-key="71" src="sounds/boom.wav"></audio>
+            <audio data-key="72" src="sounds/ride.wav"></audio>
+            <audio data-key="74" src="sounds/snare.wav"></audio>
+            <audio data-key="75" src="sounds/tom.wav"></audio>
+            <audio data-key="76" src="sounds/tink.wav"></audio>
+        </div>
 
-<body>
+        <div class="vol">
+            <div>
+                <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="10"
+                    class="vol-range"
+                />
+            </div>
+        </div>
 
+        <footer>
+            This project is inspired by @wesbos'
+            <a href="https://javascript30.com/">JavaScript30</a>. The PWA is
+            powered by <a href="https://twitter.com/ljc_dev">JC Lee</a>. <br />
+            See my other
+            <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+        </footer>
 
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
-
-  <div class="audios">
-    <audio data-key="65" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/kick.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/boom.wav"></audio>
-    <audio data-key="72" src="sounds/ride.wav"></audio>
-    <audio data-key="74" src="sounds/snare.wav"></audio>
-    <audio data-key="75" src="sounds/tom.wav"></audio>
-    <audio data-key="76" src="sounds/tink.wav"></audio>
-  </div>
-
-
-  <div class="vol">
-    <div>
-      <input type="range" min="1" max="10" value="10" class="vol-range">
-    </div>
-  </div>
-
-  <footer>
-    This project is inspired by @wesbos' <a href="https://javascript30.com/">JavaScript30</a>. See my other <a
-      href="https://all-js.netlify.app/">JavaScript projects</a>.
-  </footer>
-
-
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg)
-          })
-      })
-    }
-  </script>
-</body>
-
+        <script src="app.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker
+                        .register('./service-worker.js')
+                        .then((reg) => {
+                            console.log('Service worker registered.', reg);
+                        });
+                });
+            }
+        </script>
+    </body>
 </html>
