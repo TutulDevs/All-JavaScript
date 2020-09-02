@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <meta name="description" content="JS Drum Kit by Tutul">
+  <link rel="icon" type="image/png" href="./icons/icon-192-192.png" sizes="192x192">
+  <link rel="manifest" href="./manifest.json">
+  <!-- iOS  -->
+  <link rel="apple-touch-icon" href="./icons/icon-192-192.png" sizes="192x192">
+  <!-- Android  -->
+  <meta name="theme-color" content="#2196f3">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="DrumKit">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2196f3">
+
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
 
 
@@ -68,11 +85,22 @@
   </div>
 
   <footer>
-    This project is inspired by @wesbos' <a href="https://javascript30.com/">JavaScript30</a>. See my other <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+    This project is inspired by @wesbos' <a href="https://javascript30.com/">JavaScript30</a>. See my other <a
+      href="https://all-js.netlify.app/">JavaScript projects</a>.
   </footer>
 
 
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg)
+          })
+      })
+    }
+  </script>
 </body>
+
 </html>
