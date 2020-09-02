@@ -1,0 +1,29 @@
+{
+  "name": "Tutul's drumKit",
+  "short_name": "drumKit",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/icon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icons/icon-192-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icons/icon-192-192.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
