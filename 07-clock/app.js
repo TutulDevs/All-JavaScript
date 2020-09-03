@@ -1,31 +1,26 @@
-const qs = (selector) => document.querySelector(selector);
-
 // DOM
-const secondHand = qs('.second-hand');
-const minuteHand = qs('.min-hand');
-const hourHand = qs('.hour-hand');
-hourHand.style.background = 'red';
+const hourHand = document.querySelector('[data-hour-hand]');
+const minHand = document.querySelector('[data-minute-hand]');
+const secHand = document.querySelector('[data-second-hand]');
 
-function setDate() {
-    // TIME
+// SET CLOCK
+function setClock() {
+    // Time
     const now = new Date();
-    const hour = now.getHours();
-    const minute = now.getMinutes();
-    const seconds = now.getSeconds();
+    const secondRatio = now.getSeconds() / 60;
+    const minRatio = (secondRatio + now.getMinutes()) / 60;
+    const hourRatio = (minRatio + now.getHours()) / 12;
 
-    // set degrees
-    const secondsDegrees = (seconds / 60) * 360 + 90;
-    // 1 second = 6 deg, 60 sec = 360 deg
-    const minuteDegrees = (minute / 60) * 360 + 90;
-    const hourDegrees = (hour / 12) * 360 + 90;
-
-    console.log(hour);
-    console.log(hourDegrees);
-
-    // style change
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-    minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+    // set the rotation
+    setRotation(secHand, secondRatio);
+    setRotation(minHand, minRatio);
+    setRotation(hourHand, hourRatio);
 }
 
-setInterval(setDate, 1000);
+// ROTATION
+function setRotation(element, rotationRatio) {
+    element.style.setProperty('--rotation', rotationRatio * 360);
+}
+
+setClock();
+setInterval(setClock, 1000);
