@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clock - WDS</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: serif;
+            }
+            html {
+                font-size: 10px;
+            }
+            body {
+                background: dodgerblue;
+                font-size: 1.5rem;
+            }
+            .clock {
+                width: 25rem;
+                height: 25rem;
+                background: #ccc;
+                margin: 5rem auto;
+                border-radius: 50%;
+                border: 2px solid teal;
+                position: relative;
+            }
+            .clock::after {
+                content: '';
+                display: block;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: #000;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 50%;
+                z-index: 11;
+            }
+
+            .hand {
+                --rotation: 0;
+                position: absolute;
+                bottom: 50%;
+                left: 50%;
+                transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+                transform-origin: bottom;
+                background: #000;
+                border-radius: 1rem 1rem 0 0;
+                z-index: 10;
+            }
+
+            .second {
+                width: 0.3rem;
+                height: 35%;
+                background: crimson;
+            }
+            .minute {
+                width: 0.6rem;
+                height: 30%;
+                background: dodgerblue;
+            }
+            .hour {
+                width: 0.9rem;
+                height: 22%;
+                background: #000;
+            }
+
+            .number {
+                --rotation: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                font-size: 2rem;
+                text-align: center;
+                padding-top: 1rem;
+                transform: rotate(var(--rotation));
+            }
+            .number1 {
+                --rotation: 30deg;
+            }
+            .number2 {
+                --rotation: 60deg;
+            }
+            .number3 {
+                --rotation: 90deg;
+            }
+            .number4 {
+                --rotation: 120deg;
+            }
+            .number5 {
+                --rotation: 150deg;
+            }
+            .number6 {
+                --rotation: 180deg;
+            }
+            .number7 {
+                --rotation: 210deg;
+            }
+            .number8 {
+                --rotation: 240deg;
+            }
+            .number9 {
+                --rotation: 270deg;
+            }
+            .number10 {
+                --rotation: 300deg;
+            }
+            .number11 {
+                --rotation: 330deg;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clock">
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+            <div class="hand second" data-second-hand></div>
+
+            <!--Number-->
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+        </div>
+
+        <!--    JS      -->
+        <script>
+            // DOM
+            const hourHand = document.querySelector('[data-hour-hand]');
+            const minHand = document.querySelector('[data-minute-hand]');
+            const secHand = document.querySelector('[data-second-hand]');
+
+            // SET CLOCK
+            function setClock() {
+                // Time
+                const now = new Date();
+                const secondRatio = now.getSeconds() / 60;
+                const minRatio = (secondRatio + now.getMinutes()) / 60;
+                const hourRatio = (minRatio + now.getHours()) / 12;
+
+                // set the rotation
+                setRotation(secHand, secondRatio);
+                setRotation(minHand, minRatio);
+                setRotation(hourHand, hourRatio);
+            }
+
+            // ROTATION
+            function setRotation(element, rotationRatio) {
+                element.style.setProperty('--rotation', rotationRatio * 360);
+            }
+
+            setClock();
+            setInterval(setClock, 1000);
+        </script>
+    </body>
+</html>

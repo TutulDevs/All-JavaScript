@@ -1,7 +1,7 @@
 const FILES_TO_CACHE = [
     '/',
     './index.html',
-    './styles.css',
+    './style.css',
     './app.js',
     './sounds/boom.wav',
     './sounds/clap.wav',
@@ -14,7 +14,7 @@ const FILES_TO_CACHE = [
     './sounds/tom.wav',
 ];
 //UPDATE VERSION WHEN U UPDATE CODE
-const CACHE_NAME = 'STATIC_CACHE_V1';
+const CACHE_NAME = 'STATIC_CACHE_V2';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
