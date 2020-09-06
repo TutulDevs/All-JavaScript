@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Box Shadow Maker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h2>Update CSS Variables with <span class="hl">JS</span></h2>
+
+            <div class="mainBox">
+                <div class="controls">
+                    <div>
+                        <label for="radius">Border Radius:</label>
+                        <input
+                            id="radius"
+                            type="range"
+                            name="radius"
+                            min="0"
+                            max="150"
+                            value="0"
+                            data-sizing="px"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="off-x">Offset-x:</label>
+                        <input
+                            id="off-x"
+                            type="range"
+                            name="off-x"
+                            min="-50"
+                            max="50"
+                            value="0"
+                            data-sizing="px"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="off-y">Offset-y:</label>
+                        <input
+                            id="off-y"
+                            type="range"
+                            name="off-y"
+                            min="-50"
+                            max="50"
+                            value="0"
+                            data-sizing="px"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="blur">Blur:</label>
+                        <input
+                            id="blur"
+                            type="range"
+                            name="blur"
+                            min="0"
+                            max="25"
+                            value="5"
+                            data-sizing="px"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="spread">Spread:</label>
+                        <input
+                            id="spread"
+                            type="range"
+                            name="spread"
+                            min="0"
+                            max="200"
+                            value="5"
+                            data-sizing="px"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="base">Base Color</label>
+                        <input
+                            id="base"
+                            type="color"
+                            name="base"
+                            value="#ffc600"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="display">
+                <span>Copy</span>
+                <p class="border-radius">border-radius: 0px;</p>
+                <p class="box-shadow">box-shadow: 0px 0px 5px 5px #ffc600;</p>
+            </div>
+        </main>
+
+        <p class="footer">
+            This project is inspired by @wesbos'
+            <a href="https://javascript30.com/">JavaScript30</a>. <br />
+            See my other
+            <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+        </p>
+
+        <script src="app.js"></script>
+    </body>
+</html>

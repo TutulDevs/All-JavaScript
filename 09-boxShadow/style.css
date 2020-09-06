@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --base: #ff0;
+    --spread: 5px;
+    --blur: 5px;
+    --radius: 0px;
+    --off-x: 0px;
+    --off-y: 0px;
+
+    font-size: 10px;
+}
+
+body {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    background: #fcfeff;
+}
+
+main {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 2rem auto;
+}
+
+.controls {
+    width: 25rem;
+    padding: 1rem;
+}
+.controls > div {
+    margin: 1rem 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+input {
+    width: 100px;
+    margin: 0 0.5rem;
+}
+
+.display {
+    border-radius: 1.5rem;
+    background: #2691ab;
+    box-shadow: inset 16px 16px 32px #207b91, inset -16px -16px 32px #2ca7c5;
+    color: #ffffff;
+    width: 30rem;
+    min-height: 5rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.3rem;
+    font-family: monospace;
+    position: relative;
+}
+.display span {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #ff0;
+    padding: 0.5rem 1rem;
+    border-radius: inherit;
+}
+
+.footer {
+    background: #bada55;
+    padding: 1rem;
+}
+
+/*
+    For JS
+*/
+
+.mainBox {
+    justify-self: center;
+    display: grid;
+    place-items: center;
+    width: 85%;
+    max-width: 50rem;
+    height: 30rem;
+    margin: 5rem auto;
+    border-radius: var(--radius);
+    box-shadow: var(--off-x) var(--off-y) var(--blur) var(--spread) var(--base);
+}
+
+.hl {
+    color: var(--base);
+}
