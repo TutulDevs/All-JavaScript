@@ -6,13 +6,9 @@
 
 html {
     background: #ffc600;
-    font-family: 'helvetica neue', cursive;
-    font-size: 20px;
+    font-family: cursive, sans-serif;
+    font-size: 10px;
     font-weight: 200;
-}
-
-body {
-    margin: 0;
 }
 
 .panels {
@@ -23,7 +19,7 @@ body {
 
 .panel {
     background: #6b0f9c;
-    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 0.5rem rgba(255, 255, 255, 0.1);
     color: white;
     text-align: center;
     align-items: center;
@@ -31,7 +27,7 @@ body {
     /* Chrome + FF transitionend event.propertyName === flex-grow */
     transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
         flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-    font-size: 10px;
+    font-size: 1rem;
     background-size: cover;
     background-position: center;
 
@@ -41,25 +37,87 @@ body {
     justify-content: center;
     align-items: center;
 }
-/*
 
+/*
+Panel Gradient Backgrounds are from Gradienta.io
+*/
 
 .panel1 {
-    background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+    background: linear-gradient(45deg, #000850 0%, #000320 100%),
+        radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
+        linear-gradient(225deg, #ff7a00 0%, #000000 100%),
+        linear-gradient(
+            135deg,
+            #cdffeb 10%,
+            #cdffeb 35%,
+            #009f9d 35%,
+            #009f9d 60%,
+            #07456f 60%,
+            #07456f 67%,
+            #0f0a3c 67%,
+            #0f0a3c 100%
+        );
+    background-blend-mode: screen, overlay, hard-light, normal;
 }
 .panel2 {
-    background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
 }
 .panel3 {
-    background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+        225deg,
+        #ff3cac 0%,
+        #784ba0 50%,
+        #2b86c5 100%
+    );
 }
 .panel4 {
-    background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+    background: linear-gradient(180deg, #0c003c 0%, #bfffaf 100%),
+        linear-gradient(165deg, #480045 25%, #e9eaaf 100%),
+        linear-gradient(145deg, #480045 25%, #e9eaaf 100%),
+        linear-gradient(300deg, rgba(233, 223, 255, 0) 0%, #af89ff 100%),
+        linear-gradient(
+            90deg,
+            #45eba5 0%,
+            #45eba5 30%,
+            #21aba5 30%,
+            #21aba5 60%,
+            #1d566e 60%,
+            #1d566e 70%,
+            #163a5f 70%,
+            #163a5f 100%
+        );
+    background-blend-mode: overlay, overlay, overlay, multiply, normal;
 }
 .panel5 {
-    background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
+    background: linear-gradient(123deg, #ffffff 0%, #00b2ff 100%),
+        linear-gradient(236deg, #baff99 0%, #005e64 100%),
+        linear-gradient(180deg, #ffffff 0%, #002a5a 100%),
+        linear-gradient(
+            225deg,
+            #0094ff 20%,
+            #bff4ed 45%,
+            #280f34 45%,
+            #280f34 70%,
+            #ff004e 70%,
+            #e41655 85%,
+            #b30753 85%,
+            #b30753 100%
+        ),
+        linear-gradient(
+            135deg,
+            #0e0220 15%,
+            #0e0220 35%,
+            #e40475 35%,
+            #e40475 60%,
+            #48e0e4 60%,
+            #48e0e4 68%,
+            #d7fbf6 68%,
+            #d7fbf6 100%
+        );
+    background-blend-mode: overlay, overlay, overlay, darken, normal;
 }
-*/
 
 /* Flex Children */
 .panel > * {
@@ -89,16 +147,48 @@ body {
 .panel p {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 1.4rem rgba(0, 0, 0, 0.45);
     font-size: 2em;
 }
 
 .panel p:nth-child(2) {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .panel.open {
-    font-size: 40px;
+    font-size: 2rem;
 
     flex: 3;
+}
+
+@media screen and (max-width: 600px) {
+    .panels {
+        flex-direction: column;
+    }
+
+    .panel {
+        flex-direction: row;
+    }
+
+    .panel > * {
+        flex: 1;
+    }
+
+    .panel > *:first-child {
+        transform: translate(-100%, 0%);
+    }
+    .panel.open-active > *:first-child {
+        transform: translate(0%, 0%);
+    }
+    .panel > *:last-child {
+        transform: translate(100%, 0%);
+    }
+    .panel.open-active > *:last-child {
+        transform: translate(0%, 0%);
+    }
+
+    .panel.open {
+        flex: 2;
+        font-size: 1.5rem;
+    }
 }
