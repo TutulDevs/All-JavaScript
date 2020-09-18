@@ -12,6 +12,11 @@ html {
     box-sizing: inherit;
 }
 
+main {
+    width: 100%;
+    height: 100vh;
+}
+
 input {
     width: 100%;
     padding: 20px;
@@ -19,6 +24,7 @@ input {
 
 .search-form {
     max-width: 400px;
+    width: 80%;
     margin: 50px auto;
 }
 
