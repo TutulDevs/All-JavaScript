@@ -6,7 +6,113 @@
         <meta name="description" content="Collection of all js projects" />
         <meta name="keywords" content="js, JavaScript, web, coding" />
         <title>All JS</title>
-        <link rel="stylesheet" href="style.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                font-size: 10px;
+                font-family: Roboto, sans-serif;
+            }
+            body {
+                font-size: 1.5rem;
+                line-height: 1.6;
+                min-height: 100vh;
+                background: linear-gradient(
+                    125deg,
+                    #ecfcff 0,
+                    #ecfcff 40%,
+                    #b2fcff calc(40% + 1px),
+                    #b2fcff 60%,
+                    #5edfff calc(60% + 1px),
+                    #5edfff 72%,
+                    #3e64ff calc(72% + 1px),
+                    #3e64ff 100%
+                );
+            }
+            header {
+                width: 98%;
+                max-width: 80rem;
+                min-height: 15rem;
+                padding: 1rem;
+                margin: 1rem auto;
+                margin-bottom: 5rem;
+                text-align: center;
+                font-size: 1.75rem;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 2rem;
+            }
+            header > * {
+                margin: 0.75rem 0;
+            }
+            header h1 {
+                display: inline-block;
+                line-height: 1.2;
+                border-bottom: 1px solid #333;
+                margin-bottom: 2rem;
+                padding: 1rem 1rem 0 1rem;
+            }
+            header h1 span {
+                background: #333;
+                color: #ff0;
+                padding: 1rem;
+                padding-bottom: 0;
+            }
+            header a {
+                text-decoration: none;
+                margin: 0 0.5rem;
+                color: #dc143c;
+            }
+            table.blueTable {
+                background-color: #69d0b3;
+                width: 98%;
+                max-width: 60rem;
+                min-height: 20rem;
+                text-align: left;
+                border-collapse: collapse;
+                margin: 3rem auto;
+            }
+            table.blueTable td,
+            table.blueTable th {
+                padding: 20px 0;
+            }
+            table.blueTable tbody tr td:first-child {
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            table.blueTable tbody td {
+                font-size: 14px;
+            }
+            table.blueTable tr:nth-child(even) {
+                background: #b2fcff;
+            }
+            table.blueTable thead {
+                background: #e43f5a;
+            }
+            table.blueTable thead th {
+                font-size: 15px;
+                font-weight: 700;
+                color: #fff;
+                text-align: center;
+                background: linear-gradient(145deg, #f44360, #cd3951);
+                box-shadow: inset 12px 12px 24px #c2364d,
+                    inset -12px -12px 24px #ff4868;
+            }
+            table a {
+                text-decoration: none;
+                color: #333;
+                margin-left: 0.5rem;
+                padding-bottom: 0.25rem;
+                border-bottom: 2px dotted #ff0;
+                transition: all 0.2s ease;
+                font-weight: 700;
+            }
+            table a:hover {
+                color: #000;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -328,3 +434,11 @@
         </table>
     </body>
 </html>
+
+<!--
+<p class="footer" style="font-size: 1.5rem; padding: 1rem; text-align: center">
+    This project is inspired by @wesbos' <a href="https://javascript30.com/">JavaScript30</a> with the help of <a href="https://tfrommen.de/">Thorsten Frommen</a>. Gradients are from <a href="https://gradienta.io">gradienta</a>. <br>
+    
+    See my other <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+</p>
+-->
