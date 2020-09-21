@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    min-height: 100vh;
+    background: #bada55;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.inbox {
+    width: 90%;
+    max-width: 40rem;
+    margin: 8rem auto;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.clear {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    width: 6rem;
+    height: 6rem;
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    transition: all 0.4s;
+    filter: drop-shadow(0 0 0.75rem darkgray);
+
+    position: absolute;
+    top: 7rem;
+    left: 17rem;
+    transform: translateY(-100%);
+    z-index: -1;
+}
+.inbox:hover .clear {
+    top: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+input:checked + p {
+    background: linear-gradient(#dcdcdc, #f1f1f1);
+    text-decoration: line-through;
+}
+
+input[type='checkbox'] {
+    margin: 2rem;
+}
+
+p {
+    margin: 0;
+    padding: 2rem;
+    transition: background 0.2s;
+    flex: 1;
+    font-family: 'helvetica neue';
+    font-size: 2rem;
+    font-weight: 200;
+    border-left: 1px solid #d1e2ff;
+}

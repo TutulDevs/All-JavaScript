@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hold Shift to Check Multiple Checkboxes</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!--
+        The following is a common layout you would see in an email client.
+
+        When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
+
+        -->
+        <div class="inbox">
+            <button title="Uncheck all Checkboxes" class="clear">🧹</button>
+
+            <div class="item">
+                <input type="checkbox" />
+                <p>This is an inbox layout.</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Check one item</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Hold down your Shift key</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Check a lower item</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Everything in between should also be set to checked</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Try to do it without any libraries</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Just regular JavaScript</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Good Luck!</p>
+            </div>
+            <div class="item">
+                <input type="checkbox" />
+                <p>Don't forget to tweet your result!</p>
+            </div>
+        </div>
+
+        <p
+            class="footer"
+            style="font-size: 1.5rem; padding: 1rem; text-align: center"
+        >
+            This project is inspired by @wesbos'
+            <a href="https://javascript30.com/">JavaScript30</a>. <br />
+
+            See my other
+            <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+        </p>
+
+        <script src="app.js"></script>
+    </body>
+</html>
