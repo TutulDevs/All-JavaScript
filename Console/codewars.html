@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CodeWars Challenges</title>
+    </head>
+    <body>
+        <h2>CodeWars</h2>
 
-    <h2>
-        CodeWars
-    </h2>
+        <ol>
+            <li>Friend or Foe? - 7 kyu</li>
+            <li>Remove String Spaces - 8 kyu</li>
+            <li>Binary Addition - 7 kyu</li>
+            <li>Remove First and Last Character - 8 kyu</li>
+        </ol>
 
-    <script>
-
-        /*
+        <script>
+            /*
         // Return names == 4 characters
         const all = ["Ryan", "Kieran", "Mark"];
         let friend = friends => {if (result = friends.filter(el => el.length == 4)) return result};
         console.log(friend(all));
         */
 
-        /*
+            /*
         // Remove the spaces
         let m = 'abc de fgh ijk';
         const noSpace = x => x.split(' ').join('');
         console.log(noSpace(m));
         */
 
+            /*
+        // Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
-    </script>
-</body>
+        // The binary number returned should be a string.
+
+        const numToBi = (a, b) => (a + b).toString(2);
+
+        // toString has an optional argument 'base', which takes an integer argument. Binary is base 2; thus n.toString(2) converts n into a string containing the binary number. n.toString(16) would turn n to a hex string, for example.
+        */
+
+            /*
+        It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+        const removeChar = (str) => str.slice(1, -1);
+        */
+        </script>
+    </body>
 </html>
