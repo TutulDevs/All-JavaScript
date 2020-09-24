@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    background: #eeeeee;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 1.5;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+    height: 50vh;
+    background: repeating-linear-gradient(
+        45deg,
+        teal,
+        seagreen 50px,
+        yellowgreen 30px
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-size: 7vw;
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background: black;
+    width: 100%;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+body.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    width: 100%;
+    min-height: 5rem;
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    height: 5rem;
+
+    display: grid;
+    place-items: center;
+}
+nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem;
+    color: white;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+}
+nav ul li a:hover {
+    background: linear-gradient(45deg, seagreen, yellowgreen);
+}
+
+li.logo {
+    max-width: 0;
+    overflow: hidden;
+    background: white;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 3rem;
+    border-radius: 0 0 2.5rem 0;
+}
+
+.fixed-nav li.logo {
+    max-width: 500px;
+    overflow: visible;
+}
+
+li.logo a {
+    color: black;
+}
+
+.site-wrap {
+    max-width: 70rem;
+    width: 90%;
+    margin: 7rem auto;
+    background: white;
+    padding: 3rem;
+    text-align: justify;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    transform: scale(0.98);
+    transition: transform 0.5s;
+}
+body.fixed-nav .site-wrap {
+    transform: scale(1);
+}
+
+.site-wrap p {
+    margin: 1.5rem 0;
+}
