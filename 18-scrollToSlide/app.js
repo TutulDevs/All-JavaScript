@@ -15,29 +15,22 @@ function debounce(func, wait = 20, immediate = true) {
     };
 }
 
-const sliderImages = document.querySelectorAll('.slide-in');
+const images = document.querySelectorAll('.slide-in');
 
 // for each image, when it's peeking 50% then we reveal that image
-function checkSlide(e) {
-    sliderImages.forEach((sliderImage) => {
-        // lotsa math to figure out when it's peeking
-
+function checkSlide() {
+    images.forEach((img) => {
         // ((scY + inHe) - img.hei) / 2 // halfway of the image
-        const slideInAt =
-            window.scrollY + window.innerHeight - sliderImage.height / 2;
+        const slideInAt = window.scrollY + window.innerHeight - img.height / 2;
+        const imgBottom = img.offsetTop + img.height;
 
-        // bottom of the image
-        const imageBottom = sliderImage.offsetTop + sliderImage.height;
-
-        const isHalfShown = slideInAt > sliderImage.offsetTop;
-        const isNotScrolledPast = window.scrollY < imageBottom;
+        const halfShown = slideInAt > img.offsetTop;
+        const notScrolledPast = window.scrollY < imgBottom;
         // log these vars & scroll the page to understand
 
-        if (isHalfShown && isNotScrolledPast) {
-            sliderImage.classList.add('active');
-        } else {
-            sliderImage.classList.remove('active');
-        }
+        halfShown && notScrolledPast
+            ? img.classList.add('active')
+            : img.classList.remove('active');
     });
 }
 

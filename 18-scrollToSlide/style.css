@@ -54,6 +54,10 @@ h1 {
     box-shadow: 0 0 0 0.75rem rgba(255, 255, 255, 0.15);
 }
 
+.site-wrap p {
+    margin: 1rem 0;
+}
+
 img {
     max-width: 100%;
     padding: 1rem 0;
