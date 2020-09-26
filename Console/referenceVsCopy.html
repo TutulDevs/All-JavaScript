@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Reference VS Copy</title>
+    </head>
+    <body style="background: seagreen">
+        <h1>JS Reference VS Copy</h1>
+        <h3>Open Browser Console</h3>
+
+        <script>
+            // start with strings, numbers and booleans
+            let age = 100;
+            let age2 = age;
+            console.log('age: ', age, 'age2: ', age2);
+
+            age = 200;
+            console.log('age: ', age, 'age2: ', age2);
+
+            let name = 'wes';
+            let name2 = name;
+            console.log(name, name2);
+
+            name = 'dude';
+            console.log(name, name2);
+
+            // so the variables don't change the other one, only the originals
+
+            // Let's say we have an array
+            const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+
+            // and we want to make a copy of it.
+            const team = players;
+
+            console.log(players, team);
+
+            // You might think we can just do something like this:
+            team[3] = 'Lux';
+            console.log(players, team);
+            // an example of reference, team is the reference of players
+
+            // however what happens when we update that array?
+
+            // now here is the problem!
+
+            // oh no - we have edited the original array too!
+
+            // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+            // So, how do we fix this? We take a copy instead!
+
+            // one way
+
+            // or create a new array and concat the old one in
+
+            // or use the new ES6 Spread
+            // this is more suitable
+            const team2 = [...players];
+            console.log(team2);
+            // it's not reference , it's a new array
+
+            // now when we update it, the original one isn't changed
+
+            // The same thing goes for objects, let's say we have a person object
+            console.log('--------------   Obj   -----------');
+            // with Objects
+            const person = {
+                name: 'Wes Bos',
+                age: 80,
+            };
+
+            // and think we make a copy:
+            //const captain = person;
+            //captain.number = 99;
+            // this is a reference
+
+            // how do we take a copy instead?
+            const cap2 = Object.assign({}, person, {
+                number: 99,
+                place: 'Canada',
+                age: 13,
+            });
+            console.log(cap2);
+            // this is a copy
+
+            // We will hopefully soon see the object ...spread
+            const cap3 = { ...cap2 };
+            console.log(cap3);
+
+            // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+            const wes = {
+                name: 'wes',
+                age: 100,
+                social: {
+                    twitter: '@wesbos',
+                    facebook: '🚀 facebook',
+                },
+            };
+
+            console.log(wes);
+
+            const dev = { ...wes };
+
+            dev.name = 'wesley';
+            console.log('-----------------   Spread Objects');
+            console.log(dev);
+
+            dev.social.twitter = '@bosDude 😎';
+
+            console.log(wes.social);
+            console.log(dev.social);
+            // we need cloneDeep fn from internet to copy to the deep
+
+            console.log(wes, dev);
+
+            //      POOR MAN's cloneDeep
+            // not a good practice IF you have method/ function in them
+            const dev2 = JSON.parse(JSON.stringify(wes));
+
+            //console.clear();
+            console.log(dev2);
+
+            dev2.social.twitter = 'what is it';
+
+            console.log(wes.social);
+            console.log(dev2.social);
+        </script>
+    </body>
+</html>
