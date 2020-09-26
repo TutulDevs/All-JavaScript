@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1.5rem;
+    background: salmon;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+
+    background: url(mountain.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+
+    display: grid;
+    justify-items: center;
+    align-content: end;
+}
+header .front {
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+    text-align: center;
+    font-size: 6rem;
+    text-shadow: -2px 2px #f38e41;
+    font-weight: 600;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 0;
+    background: #bada55;
+    display: grid;
+    place-items: center;
+}
+
+.site-wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background: #eee;
+}
