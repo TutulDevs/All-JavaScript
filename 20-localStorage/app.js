@@ -30,6 +30,7 @@ function populateUI(plates = [], platesList) {
                 plate.done ? 'checked' : ''
             }/>
                 <label for="item${i}">${plate.text}</label>
+                <span data-index=${i} title="Close" class="close"> 💩 </span>
             </li>
         `;
         })
@@ -38,15 +39,21 @@ function populateUI(plates = [], platesList) {
 
 function toggleDone(e) {
     const el = e.target;
-    const index = e.target.dataset.index;
+    const index = el.dataset.index;
 
+    // toggle the check of checkbox
     if (el.matches('input')) {
-        console.log(el, index);
-
         items[index].done = !items[index].done; // flip to the opposite // true to false
 
         localStorage.setItem('items', JSON.stringify(items));
+        populateUI(items, itemsList);
+    }
 
+    // remove item
+    if (el.classList.contains('close')) {
+        items.splice(index, 1);
+
+        localStorage.setItem('items', JSON.stringify(items));
         populateUI(items, itemsList);
     }
 }
@@ -64,5 +71,3 @@ populateUI(items, itemsList);
     a. IF there, populateList
     b. or start a new array from the empty array []
 */
-
-//<span class="close">X</span>if (el.classList.contains('close')) { }

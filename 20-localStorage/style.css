@@ -1,35 +1,60 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background: url('oh-la-la.jpeg') center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+}
+
+html {
+    font-size: 10px;
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
+body {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+main {
+    background: url('oh-la-la.jpeg') center repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.filler {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 svg {
+    z-index: 1;
     fill: white;
     background: rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2rem;
     border-radius: 50%;
-    width: 200px;
-    margin-bottom: 50px;
+    width: 20rem;
+    margin-bottom: 5rem;
 }
 
 .wrapper {
-    padding: 20px;
-    max-width: 350px;
+    z-index: 1;
+    padding: 2rem;
+    width: 80%;
+    max-width: 35rem;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -39,15 +64,13 @@ h2 {
 }
 
 .plates {
-    margin: 0;
-    padding: 0;
     text-align: left;
     list-style: none;
 }
 
 .plates li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+    padding: 1rem 0;
     font-weight: 100;
     display: flex;
 }
@@ -63,7 +86,7 @@ h2 {
 
 .plates input + label:before {
     content: '⬜️';
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 .plates input:checked + label:before {
@@ -71,11 +94,25 @@ h2 {
 }
 
 .add-items {
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .add-items input {
-    padding: 10px;
+    padding: 1rem;
     outline: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.add-items input[type='submit'] {
+    cursor: pointer;
+    background: #ffc107;
+    color: #333;
+    font-weight: bold;
+}
+
+.close {
+    cursor: pointer;
+    padding-left: 0.5rem;
+    font-size: 1.75rem;
+    border-left: 1px solid #ffc107;
 }
