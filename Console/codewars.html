@@ -14,6 +14,10 @@
             <li>Binary Addition - 7 kyu</li>
             <li>Remove First and Last Character - 8 kyu</li>
             <li>Name Abbreviation - 8 kyu</li>
+            <li>Nathan's Hydration - 8 kyu</li>
+            <li>Array > Binary > integer - 7 kyu</li>
+            <li>Double the array values - 8 kyu</li>
+            <li>boolean to string - 8 kyu</li>
         </ol>
 
         <script>
@@ -81,6 +85,66 @@
                     (nameArray[0][0] + '.' + nameArray[1][0]).toUpperCase()
                 );
             }
+            */
+
+            /*
+            // 06
+             Nathan loves cycling.
+
+            Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+            You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+            For example:
+            time = 3 ----> litres = 1
+            time = 6.7---> litres = 3
+            time = 11.8--> litres = 5
+
+            const litres = (time) => Math.floor(time * 0.5);
+            */
+
+            /*
+            // 07
+            Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+            Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+            Examples:Testing: [0, 0, 0, 1] ==> 1
+            Testing: [0, 0, 1, 0] ==> 2
+            Testing: [1, 1, 1, 1] ==> 15
+            Testing: [1, 0, 1, 1] ==> 11
+
+            const binaryArrayToNumber = (arr) => parseInt(arr.join(''), 2);
+            */
+
+            /*
+            // 08
+            Given an array of integers, return a new array with each value doubled.
+
+            For example:
+            [1, 2, 3] --> [2, 4, 6]
+            For the beginner, try to use the map method - it comes in very handy quite a lot so is a good one to know.
+
+            const maps = (x) => x.map((el) => el * 2);
+            */
+
+            /*
+            // 09
+            Complete the method that takes a boolean value and
+            return a "Yes" string for true, or a "No" string for false.
+
+            function boolToWord(bool) {
+                if (bool === true) {
+                    return 'Yes'.toString();
+                } else {
+                    return 'No'.toString();
+                }
+            }
+
+            can be done like this: 
+            let boolToWord = (bool) => (bool ? 'Yes' : 'No');
+
+            boolToWord(false);
             */
         </script>
     </body>
