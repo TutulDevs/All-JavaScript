@@ -32,7 +32,7 @@ function populateUI(arr = [], list) {
             return `
             <li data-index=${i} class="note">
                 <div class="card-tools">
-                    <span title="Delete" class="close">❌</span>
+                    <span data-index=${i} title="Delete" class="close">❌</span>
                 </div>
                 <h2>
                     ${el.title}
