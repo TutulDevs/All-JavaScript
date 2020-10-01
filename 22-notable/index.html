@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Notable</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <!--
+            Notable Version 1.00
+        -->
+    </head>
+    <body>
+        <main>
+            <header>
+                <h2 title="Add Note" class="openModal">➕</h2>
+
+                <h1>Notable</h1>
+                <p>Keep notes. Be Notable.</p>
+            </header>
+
+            <ul class="noteList">
+                <li style="font-style: italic">No list to show</li>
+                <!-- 
+                <li class="note">
+                    <div class="card-tools">
+                        <span class="edit">📝</span>
+                        <span class="close">❌</span>
+                    </div>
+                    <h2>Note Title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Pariatur, officiis!
+                    </p>
+                </li> -->
+
+                <!--
+                    
+                <section class="card">
+                    <div class="card-tools">
+                        <span class="edit">📝</span>
+                        <span class="close">❌</span>
+                    </div>
+
+                    <div class="card-body">
+                        <input
+                            type="text"
+                            placeholder="Type header"
+                            class="headline"
+                        />
+                        <textarea
+                            placeholder="Type Notes"
+                            class="note"
+                        ></textarea>
+                    </div>
+                </section>
+                -->
+            </ul>
+        </main>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <form class="noteForm">
+                    <div class="card-tools">
+                        <!--Nothing-->
+                    </div>
+                    <div class="noteForm-body">
+                        <input type="text" placeholder="Title" class="title" />
+                        <textarea
+                            placeholder="Notes..."
+                            class="note"
+                            required
+                            wrap="hard"
+                        ></textarea>
+
+                        <button type="submit" class="addNote">➕</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="signature">
+            Built with 💚 by
+            <a href="https://twitter.com/TutulDevs">Tutul</a>. <br />
+
+            See my other
+            <a href="https://all-js.netlify.app/">JavaScript projects</a>.
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
