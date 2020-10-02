@@ -10,7 +10,7 @@ var tableData = [
 
 // set the table data
 function buildTable(data) {
-    const tableBody = document.getElementById('tableBody');
+    const tableBody = document.querySelector('.tableBody');
 
     tableBody.innerHTML = tableData
         .map((person) => {
