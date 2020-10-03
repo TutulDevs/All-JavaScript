@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Collection of all js projects" />
+        <meta name="keywords" content="js, JavaScript, web, coding" />
+        <title>All JS</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                font-size: 10px;
+                font-family: Roboto, sans-serif;
+            }
+            body {
+                font-size: 1.5rem;
+                line-height: 1.6;
+                min-height: 100vh;
+                background: linear-gradient(
+                    125deg,
+                    #ecfcff 0,
+                    #ecfcff 40%,
+                    #b2fcff calc(40% + 1px),
+                    #b2fcff 60%,
+                    #5edfff calc(60% + 1px),
+                    #5edfff 72%,
+                    #3e64ff calc(72% + 1px),
+                    #3e64ff 100%
+                );
+            }
+            header {
+                width: 98%;
+                max-width: 80rem;
+                min-height: 15rem;
+                padding: 1rem;
+                margin: 1rem auto;
+                margin-bottom: 5rem;
+                text-align: center;
+                font-size: 1.75rem;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 2rem;
+            }
+            header > * {
+                margin: 0.75rem 0;
+            }
+            header h1 {
+                display: inline-block;
+                line-height: 1.2;
+                border-bottom: 1px solid #333;
+                margin-bottom: 2rem;
+                padding: 1rem 1rem 0 1rem;
+            }
+            header h1 span {
+                background: #333;
+                color: #ff0;
+                padding: 1rem;
+                padding-bottom: 0;
+            }
+            header a {
+                text-decoration: none;
+                margin: 0 0.5rem;
+                color: #dc143c;
+            }
+            table.blueTable {
+                background-color: #69d0b3;
+                width: 98%;
+                max-width: 60rem;
+                min-height: 20rem;
+                text-align: left;
+                border-collapse: collapse;
+                margin: 3rem auto;
+            }
+            table.blueTable td,
+            table.blueTable th {
+                padding: 20px 0;
+            }
+            table.blueTable tbody tr td:first-child {
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            table.blueTable tbody td {
+                font-size: 14px;
+            }
+            table.blueTable tr:nth-child(even) {
+                background: #b2fcff;
+            }
+            table.blueTable thead {
+                background: #e43f5a;
+            }
+            table.blueTable thead th {
+                font-size: 15px;
+                font-weight: 700;
+                color: #fff;
+                text-align: center;
+                background: linear-gradient(145deg, #f44360, #cd3951);
+                box-shadow: inset 12px 12px 24px #c2364d,
+                    inset -12px -12px 24px #ff4868;
+            }
+            table a {
+                text-decoration: none;
+                color: #333;
+                margin-left: 0.5rem;
+                padding-bottom: 0.25rem;
+                border-bottom: 2px dotted #ff0;
+                transition: all 0.2s ease;
+                font-weight: 700;
+            }
+            table a:hover {
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="display: none">
+            <h1>All <span>JS</span> Projects</h1>
+            <p>
+                This list contains all the JavaScript mini-projects I'm building
+                now or built earlier. You can have links for both the Live
+                Preview & codes. Aditionnaly you have notes that says what
+                things were used to make this app.
+            </p>
+            <p>
+                I hope this will help JavaScript newbies & those who are looking
+                for project ideas.
+            </p>
+            <p>
+                Contact:
+                <a href="https://twitter.com/TutulDevs">Twitter</a>
+                <a href="https://github.com/TutulDevs">GitHub</a>
+                <a href="https://codepen.io/TutulDevs">Codepen</a>
+            </p>
+        </header>
+
+        <table class="blueTable">
+            <thead>
+                <tr>
+                    <th>##</th>
+                    <th>Live</th>
+                    <th>Code</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <!-- <tr>
+                    <td>00</td>
+                    <td>
+                        <a
+                            href="https://weather-td.netlify.app/"
+                            target="_blank"
+                            >Weather App</a
+                        >
+                    </td>
+                    <td>
+                        <a
+                            href="https://github.com/TutulDevs/weatherApp"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                    </td>
+                    <td>API</td>
+                </tr> -->
+                <!-- <tr>
+                    <td>07</td>
+                    <td>
+                        <a
+                            href="https://all-js.netlify.app/04-drumKit"
+                            target="_blank"
+                            >Drum Kit</a
+                        >
+                    </td>
+                    <td>
+                        <a
+                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/04-drumKit"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                    </td>
+                    <td>transitionend, audio(play, volume), PWA</td>
+                </tr>
+                <tr>
+                    <td>##</td>
+                    <td>
+                        <a href="#" target="_blank">DemoLive</a>
+                    </td>
+                    <td>
+                        <a href="#" target="_blank">DemoCode</a>
+                    </td>
+                    <td>DemoNote</td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+
+        <script type="text/javascript" src="projects.json"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
