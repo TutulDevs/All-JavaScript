@@ -37,7 +37,25 @@ function sortTable() {
     const order = this.dataset.order;
     const nameCapi = col.charAt(0).toUpperCase() + col.slice(1);
 
-    if (order == 'desc') {
+    if (col == 'birthdate') {
+        // for date sorting
+
+        if (order == 'desc') {
+            this.dataset.order = 'asc';
+            this.innerHTML = `${nameCapi}  &#9660`;
+            tableData = tableData.sort((a, b) =>
+                new Date(a[col]) > new Date(b[col]) ? 1 : -1
+            );
+        } else {
+            this.dataset.order = 'desc';
+            this.innerHTML = `${nameCapi}  &#9650`;
+            tableData = tableData.sort((a, b) =>
+                new Date(a[col]) < new Date(b[col]) ? 1 : -1
+            );
+        }
+    }
+    // string & number sorting
+    else if (order == 'desc') {
         this.dataset.order = 'asc';
         this.innerHTML = `${nameCapi}  &#9660`;
         tableData = tableData.sort((a, b) => (a[col] > b[col] ? 1 : -1));
