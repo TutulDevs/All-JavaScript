@@ -6,6 +6,7 @@
         <meta name="description" content="Collection of all js projects" />
         <meta name="keywords" content="js, JavaScript, web, coding" />
         <title>All JS</title>
+
         <style>
             * {
                 margin: 0;
@@ -76,7 +77,7 @@
             }
             table.blueTable td,
             table.blueTable th {
-                padding: 20px 0;
+                padding: 15px 5px;
             }
             table.blueTable tbody tr td:first-child {
                 text-align: center;
@@ -112,6 +113,10 @@
             table a:hover {
                 color: #000;
             }
+
+            th {
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -132,20 +137,21 @@
                 <a href="https://twitter.com/TutulDevs">Twitter</a>
                 <a href="https://github.com/TutulDevs">GitHub</a>
                 <a href="https://codepen.io/TutulDevs">Codepen</a>
+                <a href="https://www.codewars.com/users/TutulDevs">CodeWars</a>
             </p>
         </header>
 
         <table class="blueTable">
             <thead>
                 <tr>
-                    <th>##</th>
+                    <th data-col="serial" data-order="desc">↕</th>
                     <th>Live</th>
                     <th>Code</th>
                     <th>Notes</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody class="tbody">
+                <!-- <tr>
                     <td>00</td>
                     <td>
                         <a
@@ -162,492 +168,71 @@
                         >
                     </td>
                     <td>API</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/01-randomcolor/"
-                            target="_blank"
-                            >Random Color Generator</a
-                        >
-                        (RGB)
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/01-randomColor"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <td>02</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/02-todo/"
-                            target="_blank"
-                            >ToDo List</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/02-todo"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>filter</td>
-                </tr>
-                <tr>
-                    <td>03</td>
-                    <td>
-                        <a
-                            href="https://codepen.io/TutulDevs/full/yLONyxd"
-                            target="_blank"
-                            >Quick Tip</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/fun-JS/tree/master/00-quickTip"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <td>04</td>
-                    <td>
-                        <a
-                            href="https://codepen.io/TutulDevs/full/GRZprWV"
-                            target="_blank"
-                            >Running Tracker</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/fun-JS/tree/master/01-runningTracker"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <td>05</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/03-budgety/"
-                            target="_blank"
-                            >Budgety</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/03-budgety"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <td>06</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/01-randomcolor/"
-                            target="_blank"
-                            >Random Color Generator</a
-                        >
-                        (Hexadecimal)
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/01-randomColor"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <td>07</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/04-drumKit"
-                            target="_blank"
-                            >Drum Kit</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/04-drumKit"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>transitionend, audio(play, volume), PWA</td>
-                </tr>
-                <tr>
-                    <td>08</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/05-formValidator"
-                            target="_blank"
-                        >
-                            Register Form</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/05-formValidator"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>Form Validation, Regex</td>
-                </tr>
-                <tr>
-                    <td>09</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/06-rocketGame"
-                            target="_blank"
-                            >Rocket Game</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/06-rocketGame"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>setTimeout, setInterval, .computedStyleMap()</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/07-clock"
-                            target="_blank"
-                            >Clock</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/07-clock"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>new Date(), setInterval, css: rotation</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/08-movieSeat"
-                            target="_blank"
-                            >Movie Seat Booking</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/08-movieSeat"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>forEach, [...], .map, localStorage</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/09-boxShadow"
-                            target="_blank"
-                            >Box Shadow Maker</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/09-boxShadow"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>CSS Varible in JS</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/10-flexGallery"
-                            target="_blank"
-                            >Flexible Gallery</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/10-flexGallery"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>.forEach, .propertyName</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/11-typeAhead"
-                            target="_blank"
-                            >Type Ahead</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/11-typeAhead"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>fetch, regEx</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/12-drawing"
-                            target="_blank"
-                            >Canvas</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/12-drawing"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>HTML5 Canvas, mouse events</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/13-checkboxes"
-                            target="_blank"
-                            >Checkbox Checker</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/13-checkboxes"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>click, forEach</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/14-slider"
-                            target="_blank"
-                            >Image Slider</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/14-slider"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>forEach, ternary</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/15-video"
-                            target="_blank"
-                            >Video Player</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/15-video"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>play(), pause(), playbackRate, currentTime, dataset</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/16-KONAMI"
-                            target="_blank"
-                            >KONAMI Code</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/16-KONAMI"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>Array, .push, .splice, keyup</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/17-stickyNav"
-                            target="_blank"
-                            >Sticky Nav</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/17-stickyNav"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>'scroll' event, .offsetTop, .scrollY</td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/18-scrollToSlide"
-                            target="_blank"
-                            >Scroll To Slide</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/18-scrollToSlide"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>scroll, scrollY, offsetTop, forEach</td>
-                </tr>
-                <tr>
-                    <td>22</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/19-parallaxScroll"
-                            target="_blank"
-                            >Parallax Scroll Effect</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/19-parallaxScroll"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>scroll, scrollY</td>
-                </tr>
-                <tr>
-                    <td>23</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/20-localStorage"
-                            target="_blank"
-                            >List App</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/20-localStorage"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>localStorage, event delegation, .map(), object</td>
-                </tr>
-                <tr>
-                    <td>24</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/21-mouseMove"
-                            target="_blank"
-                            >Mouse Shadow</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/21-mouseMove"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>mousemove, de-structure, (e)</td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/22-notable"
-                            target="_blank"
-                            >Notable</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/22-notable"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>localStorage, event delegation, .map</td>
-                </tr>
-                <tr>
-                    <td>26</td>
-                    <td>
-                        <a
-                            href="https://all-js.netlify.app/23-sortList"
-                            target="_blank"
-                            >Sortable Table</a
-                        >
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/TutulDevs/All-JavaScript/tree/master/23-sortList"
-                            target="_blank"
-                            >GitHub</a
-                        >
-                    </td>
-                    <td>.sort, .forEach, .map</td>
-                </tr>
-
-                <!--    DEMO    -->
-                <tr>
-                    <td>##</td>
-                    <td>
-                        <a href="#" target="_blank">DemoLive</a>
-                    </td>
-                    <td>
-                        <a href="#" target="_blank">DemoCode</a>
-                    </td>
-                    <td>DemoNote</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
+
+        <script type="text/javascript" src="projectList.json"></script>
+        <script type="text/javascript">
+            const tableBody = document.querySelector('.tbody');
+            const serial = document.querySelector('[data-col]');
+            let items = [];
+
+            fetch('projectList.json')
+                .then((response) => response.json())
+                .then((data) => {
+                    items.push(...data);
+                    populateUI(items, tableBody);
+                });
+
+            function populateUI(arr = [], list) {
+                list.innerHTML = arr
+                    .map((el) => {
+                        return `
+                            <tr>
+                                <td>${
+                                    el.index < 10 ? '0' + el.index : el.index
+                                }</td>
+                                <td>
+                                    <a href="${el.urlLive}"
+                                        target="_blank" >
+
+                                        ${el.name}
+
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="${el.urlCode}"
+                                        target="_blank" >
+
+                                        ${el.codeBase} 
+
+                                    </a>
+                                </td>
+                                <td> ${el.notes}</td>
+                            </tr>
+                        `;
+                    })
+                    .join('');
+            }
+
+            function sortSerial() {
+                const col = this.dataset.col;
+                const order = this.dataset.order;
+
+                if (order == 'desc') {
+                    this.dataset.order = 'asc';
+                    items = items.sort((a, b) => (a[col] > b[col] ? 1 : -1));
+                } else {
+                    this.dataset.order = 'desc';
+                    items = items.sort((a, b) => (a[col] < b[col] ? 1 : -1));
+                }
+
+                populateUI(items, tableBody);
+            }
+
+            serial.addEventListener('click', sortSerial);
+        </script>
     </body>
 </html>
 
