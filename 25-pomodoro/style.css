@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #77aa77;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-size: 1.6rem;
+    line-height: 120%;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.timer-box {
+    width: 90%;
+    max-width: 50rem;
+    min-height: 30rem;
+}
+
+.timer-main {
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
+    border-radius: 50%;
+    background: #7be6a6;
+    position: relative;
+    box-shadow: 0 0 1rem 0px rgb(77 240 203);
+}
+
+.timer-overlay {
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: #7be4a6;
+    box-shadow: inset 6px 6px 20px #6fcd95, inset -6px -6px 20px #87fbb7;
+    font-size: 4.5rem;
+    font-weight: 400;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+    min-height: 10rem;
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    padding: 1.25rem;
+    border: 0;
+    border-radius: 30%;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+button svg {
+    transform: scale(1.5);
+    transition: all 0.3s;
+}
+button:hover svg {
+    transform: scale(1.75);
+}
