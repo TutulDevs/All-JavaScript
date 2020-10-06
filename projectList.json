@@ -232,6 +232,14 @@
         "notes": "setInterval, stopInterval"
     },
     {
+        "index": 29,
+        "name": "Follow Along Links",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/26-followLinks",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/26-followLinks",
+        "notes": "mouseenter, .getBoundingClientRect, .createElement"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
