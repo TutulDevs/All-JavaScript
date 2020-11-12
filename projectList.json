@@ -247,6 +247,14 @@
         "notes": "forEach, dragstart, dragover, drop, dataTransfer, setData, getData, currentTime"
     },
     {
+        "index": 31,
+        "name": "BMI Calculator",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/28-bmiCalc",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/28-bmiCalc",
+        "notes": "Math, submit"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",

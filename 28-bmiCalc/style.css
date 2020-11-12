@@ -1,0 +1,50 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Sans-Serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #bada55;
+    font-size: 1.6rem;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+form {
+    width: 90%;
+    max-width: 30rem;
+    min-height: 40rem;
+}
+
+form div {
+    height: 5rem;
+    margin: 1rem auto;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+input, button {
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
+}
+
+.btn {
+    background: coral;
+    color: #fff;
+    width: 10rem;
+}
