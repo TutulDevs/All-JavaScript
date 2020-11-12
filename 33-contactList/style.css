@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    color: #333;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px,transparent 2px, transparent 4px),linear-gradient(0deg, rgb(70, 143, 234),rgb(187, 235, 205));
+}
+main {
+    background: #eee;
+    width: 90%;
+    max-width: 40rem;
+    min-height: 100vh;
+    margin: 5rem 0;
+    box-shadow: 0 0.75rem 1.5rem  #ccc;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+header {
+    background: #eee;
+    height: 7.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    box-shadow: 0 1rem 1rem #ddd;
+    color: #858585;
+    border-radius: 0.75rem 0.75rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header p {
+    font-size: 2.25rem;
+    opacity: 0.5;
+}
+
+section {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+section h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.img-box {
+    border: 2px solid #add;
+    margin-right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+}
+.img-box img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+p.credit {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+}
