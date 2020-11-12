@@ -255,6 +255,14 @@
         "notes": "Math, submit"
     },
     {
+        "index": 32,
+        "name": "Currency Converter",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/29-currencyConvert",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/29-currencyConvert",
+        "notes": "API, Fetch, change"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
