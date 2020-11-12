@@ -271,6 +271,14 @@
         "notes": "target, dataset"
     },
     {
+        "index": 34,
+        "name": "FAQ Accordion",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/31-faqAccordion",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/31-faqAccordion",
+        "notes": "toggle, forEach"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
