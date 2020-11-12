@@ -25,7 +25,6 @@ function onDrop(e) {
     // select the draggable el
     const draggableEl = document.getElementById(id);
     draggableEl.style.borderColor = 'salmon';
-    //draggableEl.style.margin = '0.5rem' ;
 
     // appen our draggableEl to the zone
     this.appendChild(draggableEl);

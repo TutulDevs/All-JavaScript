@@ -244,7 +244,7 @@
         "codeBase": "GitHub",
         "urlLive": "https://all-js.netlify.app/27-dragDrop",
         "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/27-dragDrop",
-        "notes": "forEach, dragstart, dragover, drop, dataTransfer, setData, getData"
+        "notes": "forEach, dragstart, dragover, drop, dataTransfer, setData, getData, currentTime"
     },
     {
         "index": "##",

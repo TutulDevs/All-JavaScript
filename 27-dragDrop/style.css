@@ -18,35 +18,39 @@ body {
     font-size: 1.5rem;
     background: linear-gradient(-90deg, #E76F51, #F77F00);
 }
-main {
-    width: 100%;
-    min-height: 80vh;
-    padding: 2rem;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    align-content: center;
-}
+
+
 
 header {
     width: 100%;
     min-height: 20vh;
-    margin: 3rem 0 2rem 0;
-    padding: 1rem;
+    margin-bottom: 3rem;
+    padding: 3rem 1rem;
     text-align: center;
     color: #fff;
 }
+
 header h2 {
     margin-bottom: 1rem;
-
     font-size: 4.5rem;
     font-weight: 600;
     transform: skewX(-20deg);
     font-family: 'Big Shoulders Inline Text', cursive;
 }
 header p {
+    font-size: 2rem;
     font-weight: 300;
     font-style: italic;
+}
+
+main {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    display: grid;
+    gap: 4rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-content: center;
 }
 
 .item-zone,
@@ -54,13 +58,35 @@ header p {
     background: linear-gradient(118deg,#F4A261, #E9C46A);
     min-height: 10rem;
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 0 2rem 2rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
 }
+
+.item-zone::before,
+.dropzone::before {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    width: 50%;
+    height: 2rem;
+    padding: 0.25rem 0;
+    padding-left: 1.5rem;
+    background: linear-gradient(-118deg,#F4A261, #E9C46A);
+    color: #fff;
+    border-top-left-radius: 2rem;
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
+}
+.item-zone::before {
+    content: 'Pick one️';
+}
+.dropzone::before {
+    content: 'Drop️';
+}
+
 .item {
     font-size: 2.75rem;
     border: 1px solid #E9ECEF;
@@ -68,15 +94,6 @@ header p {
     padding: 1.25rem;
     margin: 0.5rem;
     filter: drop-shadow(0rem 0 0.75rem gold);
-}
-
-.dropzone::before {
-    content: '😋';
-    font-size: 2rem;
-    position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    opacity: 0.3;
 }
 
 p.footer {
