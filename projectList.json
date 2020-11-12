@@ -279,6 +279,14 @@
         "notes": "toggle, forEach"
     },
     {
+        "index": 35,
+        "name": "Twitter Threader",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/32-threader",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/32-threader",
+        "notes": "for loop, map, object, ternary"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
