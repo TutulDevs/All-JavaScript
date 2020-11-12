@@ -1,12 +1,11 @@
-[
-    {
-        "index": 0,
-        "name": "Weather App",
-        "codeBase": "GitHub",
-        "urlLive": "https://weather-td.netlify.app/",
-        "urlCode": "https://github.com/TutulDevs/weatherApp",
-        "notes": "API"
-    },
+[{
+    "index": 0,
+    "name": "Weather App",
+    "codeBase": "GitHub",
+    "urlLive": "https://weather-td.netlify.app/",
+    "urlCode": "https://github.com/TutulDevs/weatherApp",
+    "notes": "API"
+},
     {
         "index": 1,
         "name": "Random Color Generator (RGB)",
@@ -240,11 +239,18 @@
         "notes": "mouseenter, .getBoundingClientRect, .createElement"
     },
     {
+        "index": 30,
+        "name": "Drag & Drop",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/27-dragDrop",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/27-dragDrop",
+        "notes": "forEach, dragstart, dragover, drop"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
         "urlLive": "live",
         "urlCode": "code",
         "notes": "DemoNote"
-    }
-]
+    }]

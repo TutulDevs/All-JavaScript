@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@600&family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background: linear-gradient(-90deg, #E76F51, #F77F00);
+}
+main {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-content: center;
+}
+
+header {
+    width: 100%;
+    min-height: 20vh;
+    margin: 3rem 0 2rem 0;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+header h2 {
+    margin-bottom: 1rem;
+
+    font-size: 4.5rem;
+    font-weight: 600;
+    transform: skewX(-20deg);
+    font-family: 'Big Shoulders Inline Text', cursive;
+}
+header p {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.item-zone,
+.dropzone {
+    background: linear-gradient(118deg,#F4A261, #E9C46A);
+    min-height: 10rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.item {
+    font-size: 2.75rem;
+    border: 1px solid #E9ECEF;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    margin: 0.5rem;
+    filter: drop-shadow(0rem 0 0.75rem gold);
+}
+
+.dropzone::before {
+    content: '😋';
+    font-size: 2rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    opacity: 0.3;
+}
+
+p.footer {
+    text-align: center;
+    padding: 1rem;
+}
+p.footer a {
+    text-decoration: none;
+    color: #fff;
+}
