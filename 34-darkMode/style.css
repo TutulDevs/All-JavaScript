@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: #eeeeee;
+    color: #333333;
+    transition: all 0.5s ease-in;
+}
+
+header {
+    height: 25vh;
+}
+
+article {
+    height: 60vh;
+}
+
+footer {
+    height: 15vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article, footer {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+body > * {
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 25px;
+    background: teal;
+    border-radius: 25px;
+    transition: all 0.5s ease-in;
+}
+
+#toggle {
+    cursor: pointer;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background: transparent;
+    position: relative;
+}
+
+#toggle::before {
+    content: '🔅';
+}
+
+
+
+/**        On Dark Mode
+**********************************/
+
+.dark {
+    color: #ffffff;
+    background: #333333;
+}
+.dark a {
+    background: #37d796;
+}
+
+.dark #toggle::before {
+    content: '🔆';
+}

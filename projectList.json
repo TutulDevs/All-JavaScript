@@ -295,6 +295,14 @@
         "notes": "array, object, map, forEach, split, splice, join"
     },
     {
+        "index": 37,
+        "name": "Dark Mode",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/34-darkMode",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/34-darkMode",
+        "notes": "classList, toggle"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",

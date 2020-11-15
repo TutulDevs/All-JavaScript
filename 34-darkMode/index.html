@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+
+    <header>
+        <h2>
+            Logo
+        </h2>
+        <button id="toggle" onclick="mode()">
+            <!-- 🔅 changed in css  -->
+        </button>
+    </header>
+
+    <article>
+        <h1>
+            Toggle dark mode with one line of JavaScript 😎
+        </h1>
+        <a href="#">
+            Tutorial
+        </a>
+    </article>
+
+    <footer>
+        <p>
+            Built with 💡 by Tutul
+        </p>
+    </footer>
+
+
+    <script type="text/javascript" charset="utf-8">
+        const mode = () => document.body.classList.toggle('dark');
+    </script>
+
+</body>
+</html>
