@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    padding: 2rem 1rem;
+    font-family: 'Kaushan Script', cursive;
+    background-color: #f6d285;
+    background-image: -webkit-linear-gradient(245deg, #bbf0f3 0%, #f6d285 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    min-height: 10vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.btn {
+    min-width: 10rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+    background: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+main {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.card {
+    max-width: 15rem;
+    min-width: 15rem;
+    height: 15rem;
+    border: 0.5rem solid #d98324;
+    clip-path: polygon(0 0, 95% 5%, 100% 100%, 0% 100%);
+    transition: all 1s ease;
+    object-fit: cover;
+    position: relative;
+}
+.card:hover {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+}
+.footer a {
+    text-decoration: none;
+    color: teal;
+}

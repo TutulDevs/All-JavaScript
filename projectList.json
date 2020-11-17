@@ -303,6 +303,14 @@
         "notes": "classList, toggle"
     },
     {
+        "index": 38,
+        "name": "Fluffy Friends",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/35-fluffyFrn",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/35-fluffyFrn",
+        "notes": "forEach, ternary, filtering"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
