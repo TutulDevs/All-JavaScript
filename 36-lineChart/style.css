@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    background: #33415C;
+    font-size: 3rem;
+    height: 10vh;
+    display: grid;
+    place-items: center;
+}
+
+.form {
+    background: #5C677D;
+    min-height: 20vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.form > * {
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid #33415C;
+    border-radius: 0.5rem;
+    background: #fff;
+    min-width: 15rem;
+    font-family: inherit;
+}
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #33415C;
+    transition: transform 0.3s ease;
+}
+
+
+main {
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    background: #DEE2E6;
+}
+.charts {
+    border-bottom: 0.5rem solid #33415C;
+    border-left: 0.5rem solid #33415C;
+    min-width: 25%;
+    height: 15rem;
+    display: flex;
+    align-items: flex-end;
+}
+.chart {
+    width: 1rem;
+    height: 80%;
+    background: teal;
+    margin: 0 0.25rem;
+    transition: all 0.5s ease-out;
+    position: relative;
+}
+.chart:hover {
+    background: salmon;
+}
+
+.chart-snippet {
+    display: none;
+}
+.chart:hover .chart-snippet {
+    display: grid;
+    place-items: center;
+    min-width: 5rem;
+    height: 3rem;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    position: absolute;
+    top: -3rem;
+    left: 0%;
+    z-index: 999;
+    transform: translate(-40%, calc(-100% + 1.5rem));
+    border-radius: 0.5rem;
+}
+.chart-snippet::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    border-top: calc(2 * 1rem * 0.866) solid rgba(0,0,0,0.7);
+    border-left: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+}
+
+.footer {
+    background: #979DAC;
+    padding: 1rem;
+    text-align: center;
+}
