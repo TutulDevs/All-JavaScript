@@ -4,75 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Budgety</title>
+    <title>Budget App</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-<style type="text/css" media="all">
-
-</style>
 </head>
 <body>
-    
-<header>
-    <div class="container">
-    <h2>November 2020</h2>
-    <h2 class="sum">+ 0.00</h2>
-    <div class="inc">
-        <h3>Income</h3>
-        <h3 class="inc__total">+ 0.00</h3>
-    </div>
-    <div class="exp">
-        <h3>Expenses</h3>
-        <h3 class="exp__total"> - 0.00</h3>
-        <p class="percentage">__%</p>
-    </div>
-    </div>
-</header>
 
-<form class="form">
-    <input type="text" placeholder="Description" class="desc" required/>
-    <input type="number" placeholder="Value" class="value" required/>
-    <select class="type">
-        <option value="+" selected> + </option>
-        <option value="-"> - </option>
-    </select>  <!-- &#10003;  &#43; -->
-    <button type="submit" class="submit">&#10003;</button>
-</form>
+    <button class="kill" title="Kill Switch">👻</button>
 
-<section class="display">
-    <div class="display__income">
-        <h2>Income</h2>
-        <div class="income__boxes">
-            <div class="box" data-type="+">
-                <p class="description">abc</p>
-                <p class="value">$ 0.00</p>
-                <span class="delete" data-index="0">&#10799;</span>
+    <header>
+        <div class="container">
+            <h2 class="date">November 2020</h2>
+            <h2 class="sum">$ 0.00</h2>
+            <div class="inc">
+                <h3>Income</h3>
+                <h3 class="inc__total">+ 0.00</h3>
+            </div>
+            <div class="exp">
+                <h3>Expenses</h3>
+                <h3 class="exp__total"> - 0.00</h3>
+                <p class="percentage">
+                    __%
+                </p>
             </div>
         </div>
-    </div><!-- DISPLAY Income -->
-    <div class="display__expense">
-        <h2>Expense</h2>
-        <div class="expense__boxes">
-            <div class="box" data-type="-">
-                <p class="description">xyz</p>
-                <p class="value">$ 0.00</p>
-                <span class="delete" data-index="0">&#10799;</span>
+    </header>
+
+    <form class="form">
+        <input type="text" placeholder="Description" class="desc" required />
+        <input type="number" placeholder="Value" class="value" required />
+        <select class="type">
+            <option value="+" selected> + </option>
+            <option value="-"> - </option>
+        </select>  <!-- &#10003;  &#43; -->
+        <button type="submit" class="submit">&#10003;</button>
+    </form>
+
+    <section class="display">
+        <div class="display__income">
+            <h2>Income</h2>
+            <div class="income__boxes">
+                <div class="box" data-type="+">
+                    <p class="description">
+                        abc
+                    </p>
+                    <p class="value">
+                        $ 0.00
+                    </p>
+                    <span class="delete" data-index="0">&#10799;</span>
+                </div>
             </div>
         </div>
-    </div><!-- DISPLAY Income -->
-</section>
+        <!-- DISPLAY Income -->
+        <div class="display__expense">
+            <h2>Expense</h2>
+            <div class="expense__boxes">
+                <div class="box" data-type="-">
+                    <p class="description">
+                        xyz
+                    </p>
+                    <p class="value">
+                        $ 0.00
+                    </p>
+                    <span class="delete" data-index="0">&#10799;</span>
+                </div>
+            </div>
+        </div>
+        <!-- DISPLAY Income -->
+    </section>
 
-<p class="footer">
-    Built with 🍟 by <a href="https://twitter.com/TutulDevs">Tutul</a>. <br />
-    See my other <a href="https://all-js.netlify.app">JS projects</a>.
-</p>
+    <p class="footer">
+        Built with 🍟 by <a href="https://twitter.com/TutulDevs">Tutul</a>. <br />
+        See my other <a href="https://all-js.netlify.app">JS projects</a>.
+    </p>
 
-<script src="app.js" type="text/javascript" charset="utf-8"></script>
-
-<script type="text/javascript" charset="utf-8">
-    // ... Rebirth 
-    // ... Date settings 
-</script>
-
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

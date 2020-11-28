@@ -28,11 +28,11 @@ function addInBoxes(boxes, arr = []) {
 }
 
 // show in the header
-function headerUI() {
-    if (incArr.length >= 1 || expArr.length >= 1) {
+function headerUI(inc, exp) {
+    if (inc.length >= 1 || exp.length >= 1) {
         // Calculations
-        const totalInc = incArr.reduce((a, c)=> a + c.value, 0).toFixed(2);
-        const totalExp = expArr.reduce((a, c)=> a + c.value, 0).toFixed(2);
+        const totalInc = inc.reduce((a, c)=> a + c.value, 0).toFixed(2);
+        const totalExp = exp.reduce((a, c)=> a + c.value, 0).toFixed(2);
         const sumTotal = (totalInc - totalExp).toFixed(2);
         const perc = Math.round((totalExp * 100) / totalInc);
 
@@ -42,6 +42,27 @@ function headerUI() {
         percentage.textContent = perc + '%';
         sum.textContent = '$ ' + sumTotal;
     }
+}
+
+function killData () {
+    // Remove all items from the arrays
+    [incArr,
+        expArr].forEach(el => el.splice(0, el.length));
+
+    // store in storage & display
+    localStorage.setItem('incArr', JSON.stringify(incArr));
+    localStorage.setItem('expArr', JSON.stringify(expArr));
+
+
+    addInBoxes(incomeBoxes, incArr);
+    addInBoxes(expenseBoxes, expArr);
+    //headerUI(incArr, expArr);
+
+    // UI for Header part
+    incTotal.textContent = '+ 0.00';
+    expTotal.textContent = '- 0.00';
+    percentage.textContent = '__%';
+    sum.textContent = '$ 0.00';
 }
 
 function deleteItem(e) {
@@ -58,7 +79,7 @@ function deleteItem(e) {
         localStorage.setItem('incArr', JSON.stringify(incArr));
         localStorage.setItem('expArr', JSON.stringify(expArr));
 
-        headerUI();
+        headerUI(incArr, expArr);
         addInBoxes(incomeBoxes, incArr);
         addInBoxes(expenseBoxes, expArr);
     }
@@ -84,7 +105,7 @@ function calculate(e) {
     type === '+' ? incArr.push(vals): expArr.push(vals);
 
     // Header
-    headerUI();
+    headerUI(incArr, expArr);
 
     // add in BOxes
     addInBoxes(incomeBoxes, incArr);
@@ -104,9 +125,18 @@ function calculate(e) {
 // Events
 form.addEventListener('submit', calculate);
 [incomeBoxes, expenseBoxes].forEach(boxes => boxes.addEventListener('click', deleteItem));
+$('.kill').addEventListener('click', killData);
 
 
 // Show what we've on page load
-headerUI();
+headerUI(incArr, expArr);
 addInBoxes(incomeBoxes, incArr);
 addInBoxes(expenseBoxes, expArr);
+
+
+
+// ... Date settings
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const now = new Date();
+
+$('.date').textContent = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
