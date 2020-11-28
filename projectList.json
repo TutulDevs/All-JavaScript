@@ -319,6 +319,14 @@
         "notes": "insertAdjacentHTML, Math, substr"
     },
     {
+        "index": 40,
+        "name": "Budget App",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/37-budgetApp",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/37-budgetApp",
+        "notes": "Math, .map, .forEach, localStorage, event delegation, dataset, object, ternary, form"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
