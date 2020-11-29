@@ -226,4 +226,7 @@ header {
     position: fixed;
     bottom: 5vh;
     right: 0.25rem;
+
+    display: none;
+    /* appears when theres any data in the app */
 }

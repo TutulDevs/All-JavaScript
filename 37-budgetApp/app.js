@@ -29,18 +29,30 @@ function addInBoxes(boxes, arr = []) {
 
 // show in the header
 function headerUI(inc, exp) {
-    if (inc.length >= 1 || exp.length >= 1) {
-        // Calculations
-        const totalInc = inc.reduce((a, c)=> a + c.value, 0).toFixed(2);
-        const totalExp = exp.reduce((a, c)=> a + c.value, 0).toFixed(2);
-        const sumTotal = (totalInc - totalExp).toFixed(2);
-        const perc = Math.round((totalExp * 100) / totalInc);
+    // Calculations
+    const totalInc = inc.reduce((a, c)=> a + c.value, 0).toFixed(2);
+    const totalExp = exp.reduce((a, c)=> a + c.value, 0).toFixed(2);
+    const sumTotal = (totalInc - totalExp).toFixed(2);
+    const perc = Math.round((totalExp * 100) / totalInc);
 
+    if (inc.length > 0 || exp.length > 0) {
         // UI
         incTotal.textContent = '+ ' + totalInc;
         expTotal.textContent = '- ' + totalExp;
         percentage.textContent = perc + '%';
         sum.textContent = '$ ' + sumTotal;
+
+        // hide kill switch
+        $('.kill').style.display = 'block';
+    } else if (inc.length === 0 || exp.length === 0) {
+        // UI for Header part
+        incTotal.textContent = '+ 0.00';
+        expTotal.textContent = '- 0.00';
+        percentage.textContent = '__%';
+        sum.textContent = '$ 0.00';
+
+        // hide kill switch
+        $('.kill').style.display = 'none';
     }
 }
 
@@ -54,15 +66,9 @@ function killData () {
     localStorage.setItem('expArr', JSON.stringify(expArr));
 
 
+    headerUI(incArr, expArr);
     addInBoxes(incomeBoxes, incArr);
     addInBoxes(expenseBoxes, expArr);
-    //headerUI(incArr, expArr);
-
-    // UI for Header part
-    incTotal.textContent = '+ 0.00';
-    expTotal.textContent = '- 0.00';
-    percentage.textContent = '__%';
-    sum.textContent = '$ 0.00';
 }
 
 function deleteItem(e) {
