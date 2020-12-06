@@ -343,6 +343,14 @@
         "notes": "Date, Math, modal"
     },
     {
+        "index": 43,
+        "name": "Contact App",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/39-contactApp",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/39-contactApp",
+        "notes": "map, toggle, array, object, localStorage, search filter"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",
