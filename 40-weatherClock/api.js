@@ -1,12 +1,33 @@
 const input = document.querySelector('.search');
 
+/*
+//  https://cors-anywhere.herokuapp.com/
+(function() {
+    var cors_api_host = 'cors-anywhere.herokuapp.com';
+    var cors_api_url = 'https://' + cors_api_host + '/';
+    var slice = [].slice;
+    var origin = window.location.protocol + '//' + window.location.host;
+    var open = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function() {
+        var args = slice.call(arguments);
+        var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+        if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
+            targetOrigin[1] !== cors_api_host) {
+            args[1] = cors_api_url + args[1];
+        }
+        return open.apply(this, args);
+    };
+})();
+
+*/
+
 // API
 const key = 'bN1D98JxidGC0h3gsKFT1DWjAHTVAqXi';
 
 // async
 // a. for current condition of weahter
 async function getWeather (id) {
-    const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'https://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
 
     try {
@@ -15,7 +36,8 @@ async function getWeather (id) {
         input.style.borderColor = 'rgba(18, 103, 130, 0.75)';
 
         return {
-            cityTime: data[0].LocalObservationDateTime.slice(11, 16),
+            cityTime: data[0].LocalObservationDateTime.slice(11,
+                16),
             cityIsDay: data[0].IsDayTime,
             cityTemp: data[0].Temperature.Metric.Value,
             cityTempText: data[0].WeatherText,
