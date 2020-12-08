@@ -351,6 +351,14 @@
         "notes": "map, toggle, array, object, localStorage, search filter"
     },
     {
+        "index": 44,
+        "name": "Weather Clock",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/40-weatherClock",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/40-weatherClock",
+        "notes": "API, async await, map, array, object, localStorage"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",

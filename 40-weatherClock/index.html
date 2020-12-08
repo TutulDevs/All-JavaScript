@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>World Weather Clock</title>
+    <!-- 
+    Things to add: 
+    a. fix time 
+    b. not adding the same city 
+    -->
+</head>
+<body>
+
+<header class="centered">
+    <h2>Weather & Clock</h2>
+</header>
+
+<main class="centered">
+    <section class="cards">
+        <div class="card cardLeft">
+            <form class="form">
+                <input class="search" type="text" placeholder="Search a city">
+            </form>
+            <div class="content"></div>
+        </div><!-- // cardLeft -->
+        <div class="card cardRight" id="cityList">
+            <div class="city" title="Xanadu, XX" data-id="0">
+                <div class="container day">
+                    <p class="cityName">Xanadu</p>
+                    <p class="cityTime">14:15</p>
+                    <p class="cityTemp">25<sup>&deg;</sup>C </p>
+                </div>
+                <button class="delete" data-id="0">&#x2326;</button>
+            </div>
+            <div class="city" title="Xanadu, XX"  data-id="0">
+                <div class="container night">
+                    <p class="cityName">Xanadu</p>
+                    <p class="cityTime">14:15</p>
+                    <p class="cityTemp">25<sup>&deg;</sup>C </p>
+                </div>
+                <button class="delete" data-id="0">&#x2326;</button>
+            </div>
+        </div><!-- // cardRight -->
+    </section>
+</main>
+
+<footer>
+    Made with 'funstration' by <a href="https://twitter.com/TutulDevs">Tutul</a>. API is provided by <a href="https://developer.accuweather.com">AccuWeather</a>. <br /> 
+    See my other <a href="https://all-js.netlify.app">JS projects</a>. 
+</footer>
+
+
+
+<script src="api.js" type="text/javascript" charset="utf-8"></script>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

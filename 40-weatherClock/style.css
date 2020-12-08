@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333333;
+    width: 100%;
+}
+
+.centered {
+    display: grid;
+    place-items: center;
+}
+
+header {
+    width: 100%;
+    min-height: 15vh;
+    padding: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background: rgba(33, 158, 188, 1);
+}
+
+main {
+    width: 100%;
+    min-height: 85vh;
+    background: rgba(88, 180, 209, 1);
+}
+
+.cards {
+    width: 90%;
+    min-height: 10rem;
+    background: #8ECAE6;
+    margin: 1rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* align-content: center;justify-content: center; */
+    border-radius: 1rem;
+    box-shadow: inset -20px -20px 60px #2a86b0,
+    inset 20px 20px 60px #3ab8f2;
+}
+.card {
+    min-height: 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.cardLeft {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_%28blue_dots%29.svg/1200px-World_map_%28blue_dots%29.svg.png);
+    background-size: cover;
+    background-position: center center;
+}
+.form {
+    height: 4rem;
+    display: grid;
+    place-items: center;
+}
+.form input {
+    height: 100%;
+    width: 25rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(18, 103, 130, 0.75);
+    border-radius: 0.75rem;
+    background: rgba(255,255,255,0.5);
+    font-size: 2rem;
+}
+
+.cardRight {
+    justify-content: center;
+    align-items: center;
+}
+.city {
+    width: 80%;
+    height: 5rem;
+    margin: 0.5rem 0 0.5rem 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    position: relative;
+}
+.city .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+.delete {
+    position: absolute;
+    top: 0rem;
+    right: -0.5rem;
+    width: 4rem;
+    height: 100%;
+    padding-left: 1rem;
+    background: salmon;
+    color: #fff;
+    font-size: 2rem;
+    border: 0;
+    outline: 0;
+    border-radius: 0.75rem;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+.city:hover .delete {
+    right: -3rem;
+}
+
+.container.day {
+    background: #fff;
+    color: #333;
+}
+.container.night {
+    background: #333;
+    color: #fff;
+}
+
+
+
+footer {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: #ddd;
+    background: rgba(18, 103, 130, 1);
+}
+
+footer a {
+    text-decoration: none;
+    color: salmon;
+}
