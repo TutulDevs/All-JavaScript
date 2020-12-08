@@ -27,7 +27,7 @@ const key = 'bN1D98JxidGC0h3gsKFT1DWjAHTVAqXi';
 // async
 // a. for current condition of weahter
 async function getWeather (id) {
-    const base = 'https://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
 
     try {
