@@ -22,9 +22,12 @@ const input = document.querySelector('.search');
 */
 
 // API
-const key = 'bN1D98JxidGC0h3gsKFT1DWjAHTVAqXi';
+const key = 'mvi50abeoSc85sh0lVJWN14MGbmj50vs';
 
 // async
+
+// https://dataservice.accuweather.com/currentconditions/v1/26216?apikey=mvi50abeoSc85sh0lVJWN14MGbmj50vs
+
 // a. for current condition of weahter
 async function getWeather (id) {
     const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/currentconditions/v1/';
@@ -50,6 +53,7 @@ async function getWeather (id) {
 
 }
 
+//https://dataservice.accuweather.com/locations/v1/cities/search?apikey=mvi50abeoSc85sh0lVJWN14MGbmj50vs&q=Dhaka
 // b. for the cities
 async function getCity (city) {
     const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/locations/v1/cities/search';
