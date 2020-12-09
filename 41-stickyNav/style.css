@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    font-family: sans-serif;
+}
+#section1 {
+    background: #84A98C;
+}
+#section2 {
+    background: #52796F;
+}
+#section3 {
+    background: #354F52;
+}
+#section4 {
+    background: #3D5A80;
+}
+.content {
+    padding: 1em;
+}
+.centered {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+#section1 .content {
+    height: 80vh;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    background: #52796F;
+    padding: 0.15em 0.5em;
+    margin: 0.25em;
+    border-radius: 0.75em;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
+}
+.link:hover {
+    box-shadow: 0 0 0.75em -0.25em #52796F;
+}
+
+.nav {
+    background: #2F3E46;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Major Mono Display', monospace;
+
+}
+
+.nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    color: #333;
+    transform: rotateZ(5deg) rotateX(65deg) scaleY(1.2);
+    transform-origin: 50%;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.5);
+    animation: ease-in-out forwards;
+    animation-name: animateSticky;
+    animation-duration: 1s;
+}
+
+#top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-size: 1.5em;
+    width: 1.75em;
+    height: 1.75em;
+    border: 1px solid #E76F51;
+    border-radius: 50%;
+    transition: all 0.5s ease-in;
+    transform: scale(0);
+}
+.info {
+    gap: 1em;
+    align-content: center;
+}
+
+
+
+@keyframes animateSticky {
+    0% {
+        transform: rotateZ(5deg) rotateX(65deg) scaleY(1.2);
+    }
+    70% {
+        transform: rotateZ(0deg) rotateX(0deg) scaleY(1);
+    }
+    90% {
+        transform: rotateZ(0deg) rotateX(0deg) scaleY(0.7);
+    }
+    100% {
+        transform: rotateZ(0deg) rotateX(0deg) scaleY(1);
+    }
+}
