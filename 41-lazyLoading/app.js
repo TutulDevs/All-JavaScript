@@ -60,3 +60,34 @@ contents.forEach(content => {
     observeContent.observe(content);
     content.classList.add('hidden');
 });
+
+
+///////////////////////     Lazy Load Image
+// All the lazy images
+const imgs = document.querySelectorAll('img[data-src]');
+
+
+// The Callback
+const lazyToActive = (entries, observer) => {
+    const [entry] = entries;
+
+    // IF the image is not being intersecting, return nothing
+    if (!entry.isIntersecting) return;
+
+    // change src
+    entry.target.src = entry.target.dataset.src;
+
+    // remove the blur on load
+    entry.target.addEventListener('load',
+        ()=> entry.target.classList.remove('lazy'));
+};
+
+// New API
+const lazyImg = new IntersectionObserver(lazyToActive, {
+    root: null,
+    threshold: 0.15
+});
+
+
+// Observing
+imgs.forEach(img => lazyImg.observe(img));

@@ -360,11 +360,11 @@
     },
     {
         "index": 45,
-        "name": "Sticky Nav",
+        "name": "Lazy Loading",
         "codeBase": "GitHub",
-        "urlLive": "https://all-js.netlify.app/41-stickyNav",
-        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/41-stickyNav",
-        "notes": "Intersection Observer API"
+        "urlLive": "https://all-js.netlify.app/41-lazyLoading",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/41-lazyLoading",
+        "notes": "Intersection Observer API, lazy loading image"
     },
     {
         "index": "##",

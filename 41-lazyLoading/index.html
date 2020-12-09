@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Sticky Nav ft. Intersecting Observer</title>
+    <style>
+        mark {
+            background: salmon; color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <a id="top" class="centered" href="#section1" title="Kill Me 😂">🎈</a>
+
+    <section id="section1">
+        <nav class="nav">
+            <a class="link" href="#section1">Home</a>
+            <a class="link" href="#section2">Gallery</a>
+            <a class="link" href="#section3">About</a>
+            <a class="link" href="#section4">Contact</a>
+        </nav>
+        <div class="content title">
+            <h1>
+                Lazy Loading...
+            </h1>
+        </div>
+    </section>
+    <section id="section2" class="centered">
+        <div class="gallery">
+            <img src="placeholder.jpeg" alt="Demo Image" data-src="https://source.unsplash.com/random/300x225" class="img lazy" />
+            <img src="placeholder.jpeg" alt="Demo Image" data-src="https://source.unsplash.com/random/301x226" class="img lazy" />
+            <img src="placeholder.jpeg" alt="Demo Image" data-src="https://source.unsplash.com/random/302x227" class="img lazy" />
+            <img src="placeholder.jpeg" alt="Demo Image" data-src="https://source.unsplash.com/random/303x228" class="img lazy" />
+        </div>
+    </section>
+    <section id="section3" class="centered">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas, doloribus ex, nemo eaque aliquid nostrum natus soluta blanditiis molestias expedita ipsum ea in dolorem ad praesentium dolores libero vel.
+        </div>
+    </section>
+    <section id="section4" class="centered">
+        <div class="content">
+            Made by <a class="link" href="https://twitter.com/TutulDevs">Tutul</a>
+            <br />
+            See my other <a class="link" href="https://all-js.netlify.app">JS projects</a>
+        </div>
+    </section>
+
+
+
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
