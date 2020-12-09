@@ -30,3 +30,33 @@ const observeSection1 = new IntersectionObserver(stickyNav, {
 
 // observe the element
 observeSection1.observe(section1);
+
+
+
+////////////////////////        Reveal
+// All sections
+const contents = document.querySelectorAll('.content');
+
+// The Callback
+const revealSection = (entries, observer) => {
+    const [entry] = entries;
+
+    // IF the entry is not intersecting, return nothing
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('hidden');
+
+    // IF it's done once, stop observing & slow my app
+    observer.unobserve(entry.target);
+};
+
+// The Observer
+const observeContent = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.25
+});
+
+// Setting Observe
+contents.forEach(content => {
+    observeContent.observe(content);
+    content.classList.add('hidden');
+});
