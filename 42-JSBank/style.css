@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    --white: #F8F9FA;
+    --black: #333333;
+    --green: #02C39A;
+    --red: #D66853;
+}
+
+body {
+    font: 1.6rem;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    background: #E9ECEF;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.js {
+    background: #FDC500;
+    color: #333333;
+    padding: 1rem 0.75rem 0.25rem 0.75rem;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 7rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(255,255,255,0.75);
+}
+
+.content {
+    width: 95%;
+    max-width: 100rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    flex: 2;
+    color: var(--green);
+    font-size: 2.5rem;
+}
+.loginForm {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+.loginForm > * {
+    width: 10rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0.25rem 0.5rem -0.2rem rgba(0,0,0,0.3);
+}
+.loginForm button {
+    width: 6rem;
+    background: #ffffff;
+    border: 1px solid var(--green);
+}
+.user {
+    box-shadow: none;
+}
+
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 7rem);
+    position: relative;
+}
+
+.homepage-box, .banking-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 7rem);
+    z-index: 1;
+}
+
+.homepage, .banking {
+    width: 95%;
+    max-width: 100rem;
+    min-height: 65vh;
+    margin: 2rem auto;
+}
+
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    font-size: 2.5rem;
+}
+.homepage .title {
+    font-size: 5rem;
+    color: var(--green);
+}
+
+.homepage {
+    display: flex;
+    /* JS will deal with it */
+}
+.banking {
+    display: none;
+    /* JS will deal with it */
+}
+
+.curBalBox {
+    width: 100%;
+    min-height: 5rem;
+    font-size: 1.35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--green);
+}
+.curBal {
+    font-weight: 400;
+}
+
+.boxes {
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    font-size: 1.5rem;
+}
+.infoBox {
+    height: 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    position: relative;
+    box-shadow: 0.25rem 0.25rem 0.5rem -2px rgba(0,0,0,0.15), -0.25rem -0.25rem 0.5rem -2px rgba(255,255,255,0.9);
+}
+
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.75rem 0.2rem;
+    display: inherit;
+    justify-content: space-between;
+}
+li:last-child {
+    border-bottom: 0;
+}
+li .pill {
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.25rem 0.5rem;
+}
+li.dep .pill {
+    background: var(--green);
+}
+li.wit .pill {
+    background: var(--red);
+}
+
+li .date {
+    font-size: 1.3rem;
+}
+
+.formBox {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: row;
+}
+.form {
+    box-shadow: -0.25rem -0.25rem 0.5rem -2px rgba(0,0,0,0.15), 0.25rem 0.25rem 0.5rem -2px rgba(255,255,255,0.9);
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: row;
+}
+.form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form div input {
+    width: 100%;
+    border: 0.15rem solid var(--green);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: transparent;
+}
+.form div button {
+    width: 30%;
+    padding-bottom: 0.25rem;
+    font-size: 2rem;
+    background: var(--green);
+    transform: translateX(-50%);
+}
+
+
+.witForm div input {
+    border: 0.15rem solid var(--red);
+}
+.witForm div button {
+
+    background: var(--red);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: -15rem;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+    color: dodgerblue;
+}

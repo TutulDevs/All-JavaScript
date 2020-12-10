@@ -367,6 +367,14 @@
         "notes": "Intersection Observer API, lazy loading image"
     },
     {
+        "index": 46,
+        "name": "JS Bank",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/42-JSBank",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/42-JSBank",
+        "notes": "Date, insertAdjacentHTML, Form"
+    },
+    {
         "index": "##",
         "name": "DemoLive",
         "codeBase": "GitHub",

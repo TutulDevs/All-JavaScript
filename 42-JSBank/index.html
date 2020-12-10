@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>JS Bank</title>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <h1 class="logo">
+                <span class="js">JS</span>
+            </h1>
+            <form class="loginForm">
+                <input type="email" placeholder="a@b.dev" class="email" required />
+                <input type="password" placeholder="1234" class="password" />
+                <button type="submit" class="loginBtn">Login</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="homepage-box">
+            <div class="homepage">
+                <h1 class="title"><span class="js">JS</span> Bank</h1>
+                <h3>The only bank you need!</h3>
+            </div>
+        </section>
+        <section class="banking-box">
+            <div class="banking">
+                <div class="curBalBox">
+                    <h2>Current Balance</h2>
+                    <h2 class="curBal"> <span class="sum">1250</span> €</h2>
+                </div>
+
+                <div class="boxes">
+                    <ul class="infoBox" id="history">
+                        <li class="dep">
+                            <p class="pill">
+                                Deposit
+                            </p>
+                            <p class="date">
+                                25/11/'20
+                            </p>
+                            <p class="amount">
+                                1800 €
+                            </p>
+                        </li>
+                        <li class="wit">
+                            <p class="pill">
+                                Withdrawn
+                            </p>
+                            <p class="date">
+                                05/10/'20
+                            </p>
+                            <p class="amount">
+                                - 550 €
+                            </p>
+                        </li>
+                    </ul>
+                    <!-- infoBox -->
+                    <div class="formBox">
+                        <form class="form depForm">
+                            <h3>Deposit</h3>
+                            <div>
+                                <input type="number" placeholder="Amount" />
+                                <button type="submit">&#9755;</button>
+                            </div>
+                        </form>
+                        <form class="form witForm">
+                            <h3>Withdraw</h3>
+                            <div>
+                                <input type="number" placeholder="Amount" />
+                                <button type="submit">&#9755;</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- FormBox -->
+                </div>
+                <!-- boxes -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Made with 💶 by <a href="https://twitter.com/TutulDevs">Tutul</a> 😎 <br />
+        See my other <a href="https://all-js.netlify.app">JS projects</a>
+    </footer>
+
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
