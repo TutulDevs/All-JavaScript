@@ -375,10 +375,10 @@
         "notes": "Date, insertAdjacentHTML, Form"
     },
     {
-        "index": "##",
-        "name": "DemoLive",
+        "index": 47,
+        "name": "Furnit",
         "codeBase": "GitHub",
-        "urlLive": "live",
-        "urlCode": "code",
-        "notes": "DemoNote"
+        "urlLive": "https://all-js.netlify.app/43-Furnit",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/43-Furnit",
+        "notes": "e-commerce site, class, forEach, map, find, localStorage"
     }]
