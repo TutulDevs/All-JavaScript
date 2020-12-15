@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Furnit</title>
+</head>
+<body>
+  
+<header class="bg-light">
+    <h2 class="text-secondary logo">Furnit</h2>
+    <button class="cart-btn">
+        <span class="total-quantity">0</span> &#128722; 
+    </button>
+</header>
+
+<div class="jumbotron home">
+  <h1 class="display-4">The Place Where Class Meets Quality</h1>
+    <a href="#" class="btn btn-warning btn-lg" >Shop Now</a>
+</div>
+
+<main class="main">
+    <h2 class="display-3 main-title">Featured Products</h2>
+    
+    <section class="items p-3 mb-3 mt-3">
+        <!--
+        <div class="card">
+          <img class="card-img-top" src="https://placekitten.com/200/600" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">King Bed Panel</h4>
+            <p class="card-text">$ 12.99</p>
+            <button class="btn btn-warning btn-lg toCart">Add to Cart</button>
+          </div>
+        </div> card -->
+    </section>
+    
+    <section class="main-footer">
+        <a href="#" class="btn btn-info btn-lg" >See More</a>
+    </section>
+</main>
+
+<footer class="bg-light text-center text-secondary p-3 mt-5">
+    Made by <a href="https://twitter.com/TutulDevs" class="text-success">Tutul</a>. Inspired by <a href="https://m.youtube.com/watch?v=90PgFUPIybY" class="text-success">John Smilga</a>. <br />
+    See my other <a href="https://all-js.netlify.app" class="text-success">JS Projects</a>.
+</footer>
+
+<div class="cart-overlay">
+    <div class="cart bg-light">
+        <div class="cart-header p-3">
+            <h3>Your Cart</h3>
+            <button class="btn btn-danger cart-close">X</button>
+        </div>
+        
+        <div class="cart-content p-3">
+             <!--
+            <div class="cart-item mt-2 mb-2">
+                <div class="cart-desc">
+                    <img src="https://placekitten.com/100/80" alt="" class="mr-3 cart-desc-img">
+                    <div>
+                        <h3 class="cart-item-name">ABC</h3>
+                        <p class="cart-item-price">$ 12.99</p>
+                        <button class="btn btn-danger cart-item-remove">Remove</button>
+                    </div>
+                </div>
+                <div class="tools">
+                    <button class="btn btn-success cart-item-minus"> - </button>
+                    <button class="btn btn-outline-dark cart-item-quantity">1</button>
+                    <button class="btn btn-success cart-item-plus"> + </button>
+                </div>
+            </div>  
+            come from js -->
+        </div>
+        
+        <div class="cart-footer p-3 text-center">
+            <h3>Total: $ <span class="total-price"> 00 </span> </h3>
+            <button class="btn btn-danger btn-lg cart-clear">Clear Cart</button>
+        </div>
+    </div>
+</div>
+  
+  
+<script src="products.js" type="text/javascript" charset="utf-8"></script>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>
