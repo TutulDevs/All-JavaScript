@@ -1,0 +1,35 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+}
+header {
+    width: 100%;
+    min-height: 15vh;
+    display: grid;
+    place-items: center;
+}
+main {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: repeating-linear-gradient(45deg, rgb(255,255,255) 0px, rgb(255,255,255) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 10px,transparent 10px, transparent 11px),linear-gradient(90deg, hsl(256,7%,84%),hsl(256,7%,84%));
+}
+.table {
+    width: 98%;
+    max-width: 60rem;
+    margin: 2rem auto;
+}
+.tbody tr:nth-child(odd) {
+    background: #48CAE4;
+}
+.tbody tr:nth-child(even) {
+    background: #ADE8F4;
+}
+.pagination {
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -381,4 +381,12 @@
         "urlLive": "https://all-js.netlify.app/43-Furnit",
         "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/43-Furnit",
         "notes": "e-commerce site, class, forEach, map, find, localStorage"
+    },
+    {
+        "index": 48,
+        "name": "Pagination",
+        "codeBase": "GitHub",
+        "urlLive": "https://all-js.netlify.app/44-pagination",
+        "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/44-pagination",
+        "notes": "async, await, NumberFormat, map, for loop, forEach, insertAdjacentHTML"
     }]
