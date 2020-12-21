@@ -389,4 +389,12 @@
         "urlLive": "https://all-js.netlify.app/44-pagination",
         "urlCode": "https://github.com/TutulDevs/All-JavaScript/tree/master/44-pagination",
         "notes": "async, await, NumberFormat, map, for loop, forEach, insertAdjacentHTML"
+    },
+    {
+        "index": 49,
+        "name": "Jobss",
+        "codeBase": "GitHub",
+        "urlLive": "https://jobss.netlify.app/",
+        "urlCode": "https://github.com/TutulDevs/Jobs",
+        "notes": "async, await, map, forEach, localStorage, event delegation"
     }]
