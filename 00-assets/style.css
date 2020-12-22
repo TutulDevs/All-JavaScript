@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 
 * {
     margin: 0;
@@ -7,17 +7,15 @@
 }
 html {
     font-size: 10px;
-    font-family: 'JetBrains Mono',  sans-serif;
+    font-family: sans-serif;
 }
 body {
     font-size: 1.5rem;
     line-height: 1.6;
-    width: 100%;
     min-height: 100vh;
-    background: repeating-linear-gradient(135deg, rgba(47, 47, 47, 0.08) 0px, rgba(47, 47, 47, 0.08) 45px,rgba(50, 50, 50, 0.08) 45px, rgba(50, 50, 50, 0.08) 86px,rgba(18, 18, 18, 0.08) 86px, rgba(18, 18, 18, 0.08) 123px,rgba(249, 249, 249, 0.08) 123px, rgba(249, 249, 249, 0.08) 141px,rgba(64, 64, 64, 0.08) 141px, rgba(64, 64, 64, 0.08) 185px,rgba(242, 242, 242, 0.08) 185px, rgba(242, 242, 242, 0.08) 196px,rgba(199, 199, 199, 0.08) 196px, rgba(199, 199, 199, 0.08) 236px),repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 48px,rgba(119, 119, 119, 0.08) 48px, rgba(119, 119, 119, 0.08) 79px,rgba(81, 81, 81, 0.08) 79px, rgba(81, 81, 81, 0.08) 110px,rgba(203, 203, 203, 0.08) 110px, rgba(203, 203, 203, 0.08) 145px,rgba(35, 35, 35, 0.08) 145px, rgba(35, 35, 35, 0.08) 184px,rgba(96, 96, 96, 0.08) 184px, rgba(96, 96, 96, 0.08) 232px,rgba(194, 194, 194, 0.08) 232px, rgba(194, 194, 194, 0.08) 267px),linear-gradient(90deg, rgb(4, 61, 140),rgb(58, 10, 94));
+    background: radial-gradient(circle at center center, hsla(166,0%,10%,1) 0%,hsla(181,0%,10%,1) 29%,transparent 65%),linear-gradient(90deg, rgb(35,35,35) 0%, rgb(35,35,35) 50%,rgb(35,35,35) 50%, rgb(35,35,35) 100%);
+    background-size: 7px 7px;
 }
-
-
 header {
     width: 98%;
     max-width: 80rem;
@@ -27,8 +25,8 @@ header {
     margin-bottom: 5rem;
     text-align: center;
     font-size: 1.75rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 1.5rem;
+    border-radius: 1.25rem;
+    background: repeating-linear-gradient(297deg, hsla(359,0%,70%,0.12) 0px,transparent 2px,hsla(359,0%,70%,0.12) 7px,transparent 9px,hsla(359,0%,70%,0.12) 14px,transparent 16px,hsla(359,0%,70%,0.12) 21px),repeating-linear-gradient(59deg, hsla(359,0%,70%,0.12) 0px,transparent 2px,hsla(359,0%,70%,0.12) 7px,transparent 9px,hsla(359,0%,70%,0.12) 14px,transparent 16px,hsla(359,0%,70%,0.12) 21px),repeating-linear-gradient(0deg, hsla(359,0%,70%,0.12) 0px,transparent 2px,hsla(359,0%,70%,0.12) 7px,transparent 9px,hsla(359,0%,70%,0.12) 14px,transparent 16px,hsla(359,0%,70%,0.12) 21px),linear-gradient(90deg, rgb(253,253,253),rgb(253,253,253));
 }
 header > * {
     margin: 0.75rem 0;
@@ -52,11 +50,9 @@ header a {
     margin: 0 0.5rem;
     color: #dc143c;
 }
-
-
 table.blueTable {
     background-color: #69d0b3;
-    min-width: 98%;
+    width: 98%;
     max-width: 60rem;
     min-height: 20rem;
     text-align: left;
@@ -69,6 +65,7 @@ table.blueTable th {
 }
 table.blueTable tbody tr td:first-child {
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 table.blueTable tbody td {
     font-size: 1.4rem;
@@ -81,7 +78,7 @@ table.blueTable thead {
 }
 table.blueTable thead th {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     text-align: center;
     background: linear-gradient(145deg, #f44360, #cd3951);
@@ -91,11 +88,11 @@ table.blueTable thead th {
 table a {
     text-decoration: none;
     color: #333;
-    /* margin-left: 0.5rem; */
-    padding: 0.25rem;
-    border-bottom: 2px dotted purple;
+    margin-left: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px dotted #9f9f9f;
     transition: all 0.2s ease;
-    font-weight: 600;
+    font-weight: 700;
 }
 table a:hover {
     color: #000;
