@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Sniglet&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'JetBrains Mono',  sans-serif;
+}
+body {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    background: repeating-linear-gradient(135deg, rgba(47, 47, 47, 0.08) 0px, rgba(47, 47, 47, 0.08) 45px,rgba(50, 50, 50, 0.08) 45px, rgba(50, 50, 50, 0.08) 86px,rgba(18, 18, 18, 0.08) 86px, rgba(18, 18, 18, 0.08) 123px,rgba(249, 249, 249, 0.08) 123px, rgba(249, 249, 249, 0.08) 141px,rgba(64, 64, 64, 0.08) 141px, rgba(64, 64, 64, 0.08) 185px,rgba(242, 242, 242, 0.08) 185px, rgba(242, 242, 242, 0.08) 196px,rgba(199, 199, 199, 0.08) 196px, rgba(199, 199, 199, 0.08) 236px),repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 48px,rgba(119, 119, 119, 0.08) 48px, rgba(119, 119, 119, 0.08) 79px,rgba(81, 81, 81, 0.08) 79px, rgba(81, 81, 81, 0.08) 110px,rgba(203, 203, 203, 0.08) 110px, rgba(203, 203, 203, 0.08) 145px,rgba(35, 35, 35, 0.08) 145px, rgba(35, 35, 35, 0.08) 184px,rgba(96, 96, 96, 0.08) 184px, rgba(96, 96, 96, 0.08) 232px,rgba(194, 194, 194, 0.08) 232px, rgba(194, 194, 194, 0.08) 267px),linear-gradient(90deg, rgb(4, 61, 140),rgb(58, 10, 94));
+}
+
+
+header {
+    width: 98%;
+    max-width: 80rem;
+    min-height: 15rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 1.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1.5rem;
+}
+header > * {
+    margin: 0.75rem 0;
+}
+header h1 {
+    display: inline-block;
+    line-height: 1.2;
+    border-bottom: 1px solid #333;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 0 1rem;
+    font-family: 'Sniglet', cursive;
+}
+header h1 span {
+    background: #333;
+    color: #ff0;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+header a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    color: #dc143c;
+}
+
+
+table.blueTable {
+    background-color: #69d0b3;
+    min-width: 98%;
+    max-width: 60rem;
+    min-height: 20rem;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 3rem auto;
+}
+table.blueTable td,
+table.blueTable th {
+    padding: 1.25rem 0.5rem;
+}
+table.blueTable tbody tr td:first-child {
+    text-align: center;
+}
+table.blueTable tbody td {
+    font-size: 1.4rem;
+}
+table.blueTable tr:nth-child(even) {
+    background: #b2fcff;
+}
+table.blueTable thead {
+    background: #e43f5a;
+}
+table.blueTable thead th {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(145deg, #f44360, #cd3951);
+    box-shadow: inset 12px 12px 24px #c2364d,
+    inset -12px -12px 24px #ff4868;
+}
+table a {
+    text-decoration: none;
+    color: #333;
+    /* margin-left: 0.5rem; */
+    padding: 0.25rem;
+    border-bottom: 2px dotted purple;
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+table a:hover {
+    color: #000;
+}
+
+th:first-child {
+    cursor: pointer;
+}
