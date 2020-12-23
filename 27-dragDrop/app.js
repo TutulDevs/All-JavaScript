@@ -19,6 +19,7 @@ function onDragOver(e) {
 }
 
 function onDrop(e) {
+    e.preventDefault();
     //get the data that we set
     const id = e.dataTransfer.getData('text');
 
